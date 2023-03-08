@@ -6,9 +6,8 @@
     margin:0;
     width: 100%;
     background-color: #ff4d49;
-  
-    
 }
+
 #logo{
     font-weight: 700;
     font-size: 1.5rem;
@@ -76,7 +75,7 @@ html, body, #wrapper {
     margin: 0;
     padding-top: 60px;
     border: 0;
- }
+}
  #wrapper td {
     vertical-align: middle;
     text-align: center;
