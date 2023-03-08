@@ -12,6 +12,8 @@ let img_js = document.querySelector("#js")
 let d = document.querySelector("#dice")
 let navy = document.querySelector("#navy")
 let btnColor = document.querySelectorAll(".btnColor")
+let login  = document.querySelector("#login")
+let btMore = document.querySelector("#ubBT")
 
 
 // Función que te da el width de la ventana del navegador
@@ -31,8 +33,10 @@ let pos = 0
 function urba(){
     pos = 0
     logo.style.color = "#FFFFFF";
+    login.style.backgroundColor = "#FF4D48";
     page.style.backgroundColor =  "#FF4D48";
     navy.style.backgroundColor = "#FF4D48";
+    btMore.style.color = "#FFFFFF";
     // loop para cambiar el color a todos los elementos de navi
     for (const element of navi) {
         element.style.color = "#FFFFFF"
@@ -49,8 +53,10 @@ function urba(){
 function javu(){
     pos = 1
     logo.style.color = "#006637";
+    login.style.backgroundColor = "#FFFCF4";
     page.style.backgroundColor =  "#FFFCF4";
     navy.style.backgroundColor = "#FFFCF4";
+    btMore.style.color = "#006637";
     
     for (const element of navi) {
         element.style.color = "#006637"
@@ -66,8 +72,10 @@ function javu(){
 function jspenny(){
     pos = 2
     logo.style.color = "#FAB0AE";
+    login.style.backgroundColor = "#BDEFFF";
     page.style.backgroundColor =  "#BDEFFF";
     navy.style.backgroundColor = "#BDEFFF";
+    btMore.style.color = "#FAB0AE";
     
     for (const element of navi) {
         element.style.color = "#F5635F"
@@ -144,7 +152,7 @@ $('html, body').css({
 });
 
 // Las imagenes de cada marca
-let btMore = document.querySelector("#ubBT")
+
 let subs = document.querySelector("#subs")
 let ht = document.querySelector("#ht")
 
