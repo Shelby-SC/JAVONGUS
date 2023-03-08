@@ -110,3 +110,28 @@ html, body, #wrapper {
   #js{
     position: relative;
   }
+
+  #login{
+    background-color: #FF4D48;
+    border-style: none;
+    color: #ffffff;
+  }
+
+  #exampleModal2{
+    color: black;
+  }
+
+  #singin{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-bottom:1%;
+    margin-left: 35%;
+    background-color: #393e46;
+    border-color: #393e46;
+  
+  }
+
+  #svch{
+    background-color: #7286d3;
+    border-color: #393e46;
+  }

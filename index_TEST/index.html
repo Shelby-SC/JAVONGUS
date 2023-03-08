@@ -88,13 +88,79 @@
                                     <i class="bi bi-cart fa-2x navi_i" style="font-size: 1.2rem;"></i>
                                     <small class="ms-2 navi">0</small>
                                 </li>
+                                <!-- Login thingy -------------------------------------------------------------- -->
                                 <li class="nav-item col-6 col-md-auto p-3">
-                                    <i class="bi bi-person-circle navi_i" style="font-size: 1.2rem;"></i>
-                                </li>                        
+                                    <!-- Button trigger modal -->
+                                        <button type="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="login">
+                                            <i class="bi bi-person-circle navi_i" style="font-size: 1.2rem;"></i>
+                                        </button>
+
+                                        
+                                    
+                                </li>   
+                                <!--  ----------------------------------------------------------------------------->
                             </ul>
                         </div>
                     </div>
                 </nav>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Log in</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                
+                                <!-- Modal thingy--------------------------------- -->
+                                <form>
+                                    <!-- Email input -->
+                                    <div class="form-outline mb-4">
+                                      <input type="email" id="form2Example1" class="form-control" placeholder="Email address"/>
+                                      <!-- <label class="form-label" for="form2Example1">Email address</label> -->
+                                    </div>
+                                  
+                                    <!-- Password input -->
+                                    <div class="form-outline mb-4">
+                                      <input type="password" id="form2Example2" class="form-control" placeholder="Password"/>
+                                      <!-- <label class="form-label" for="form2Example2">Password</label> -->
+                                    </div>
+                                  
+                                    <!-- 2 column grid layout for inline styling -->
+                                    <div class="row mb-4">
+                                      <div class="col d-flex justify-content-center">
+                                        <!-- Checkbox -->
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                                          <label class="form-check-label" for="form2Example31"> Remember me </label>
+                                        </div>
+                                      </div>
+                                  
+                                      <div class="col">
+                                        <!-- Simple link -->
+                                        <a href="#!">Forgot password?</a>
+                                      </div>
+                                    </div>
+                                  
+                                    <!-- Submit button -->
+                                    <button type="button" class="btn btn-primary btn-block text-center" id="singin">Sign in</button>
+                                  
+                                    <!-- Register buttons -->
+                                    <div class="text-center">
+                                      <p>Not a member? <a href="#!">Register</a></p>
+                                    </div>
+                                  </form>
+
+                                <!-- ------------------------------------------ -->
+                            </div>
+                            <!-- <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" id="svch">Save changes</button>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
                 <!-- Ignorar esta parte -->
                 <!-- <button onclick="back()">Back</button>
                 <button onclick="forward()">Front</button> -->
@@ -215,7 +281,7 @@
                                 <div id="footer" style="height: 200px;">
                                     <footer style="color: #393e46; margin-top: 2%;">
                                         <div class="container text-start">
-                                            <div class="row">x
+                                            <div class="row">
                                                 <div class="col text-start">
                                 
                                                     <ul style="list-style-type: none; text-align: left; list-style: none; padding-left: 0;">
