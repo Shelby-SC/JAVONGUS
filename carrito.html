@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./clases.css">
+</head>
+<nav>
+
+    <body id="page">
+        <!-- CONTAINER FLUID -->
+        <!-- <div class="container-fluid"> -->
+        <nav class="navbar navbar-expand-md navbar-dark colorNav">
+            <!-- todo lo que va después de navbar-expand-md que es donde se hace resposiva -->
+            <!-- es cosas de estilo -->
+            <div class="container-fluid">
+                <a class="navbar-brand ms-3" href="#">
+                    <span id="logo">ht&ml</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- elementos de menu colapsable -->
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav me-auto ms-auto">
+                        <!-- En ul va la dirección de los items, si es me-auto se mueve a derecha-->
+                        <!-- si es izq se pone ms-auto y si no tiene nada es centro creo -->
+
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle navi" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown">Catálogo</a>
+                            <!-- Esto que le voy a poner abajo es el dropdown -->
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="" class="dropdown-item">Ex1</a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">Ex2</a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">Ex3</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link navi">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link navi">Contacto</a>
+                        </li>
+                    </ul>
+
+                    <!-- voy a poner este hr por que ps smn, pero no sé que es -->
+                    <hr class="text-white-50">
+
+                    <!-- son los íconos -->
+                    <ul class="navbar-nav flex-row flex-wrap text-light">
+                        <!-- creo que esta madre es para que se vean mejor -->
+                        <!-- navbar-nav es la clase de navbar, para que se tome con sus estilos -->
+                        <li class="nav-item col-6 col-md-auto p-3">
+                            <!-- lo que los col hacen es que ahuevo sea micha y micha -->
+                            <!-- el flex row es pa que cambien de row sin pedos -->
+                            <i class="bi bi-cart fa-2x" style="font-size: 1.2rem;"></i>
+                            <small class="ms-2 navi">0</small>
+                        </li>
+                        <li class="nav-item col-6 col-md-auto p-3">
+                            <i class="bi bi-person-circle" style="font-size: 1.2rem;"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Ignorar esta parte -->
+        <!-- <button onclick="cha()">Click me</button>
+            <div class="d-flex justify-content-center" id="bod">
+                
+                <img src="/imgs/urba4.png" class="img-fluid d-block" alt="Responsive image" id="urbanot1">
+                
+            </div> -->
+        <!-- ----------------------------------- -->
+
+        <!-- </div> -->
+        <!-- BOOTSTRAP JS -->
+        <script src="/JS/test.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+
+    </body>
+</nav>
+
+<body class="fondoPrincipal">
+    <article class="p-5 col-12">
+        <!-- //<h2>Tus articulos</h2> -->
+        <div>
+            <div class="row justify-content-center">
+
+                <div class="col-12 col-sm-7 col-md-8 col-lg-7 col-xl-6">
+                    <div class="p-2 text-left border-2 rounded-top-1 articulos mb-1 mt-1">
+                        <div class="row">
+                            <h3 class="text-start">Shopping Cart</h3>
+                            <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                <h4 class="text-start">Tus Articulos</h4>
+                            </div>
+
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-end">
+                                <h4>Precio</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" p-2 text-left border-2 articulos pb-1 mt-1">
+                        <div class="row">
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+
+
+                                <img src="./imgs/TestCarrito/HoodieCat.png" class="img-fluid imagenArticulo"
+                                    alt="Responsive image">
+                            </div>
+
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+
+                                <p class="textoArticulos">Cat Hoodie para Mujer</p>
+                                <p>Talla: M</p>
+
+                            </div>
+
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-end">
+
+                                <p>$ 989.99</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="p-2 text-left border-2 articulos mb-1 mt-1">
+                        <div class="row">
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+
+
+                                <img src="./imgs/TestCarrito/DenimJacket.png" class="img-fluid imagenArticulo"
+                                    alt="Responsive image">
+                            </div>
+
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+
+                                <p class="textoArticulos">Chamarra Mezclilla para Mujer</p>
+                                <p>Talla: M</p>
+
+                            </div>
+
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-end">
+
+                                <p>$ 1,499.99</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="p-2 text-left border-2 articulos mb-1">
+                        <div class="row">
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+
+
+                                <img src="./imgs/TestCarrito/ShortsDenim.png" class="img-fluid imagenArticulo"
+                                    alt="Responsive image">
+                            </div>
+
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+
+                                <p class="textoArticulos">Shorts cortos Mezclilla para Mujer</p>
+                                <p>Talla: M</p>
+
+                            </div>
+
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-end">
+
+                                <p>$ 459.99</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="p-2 text-left border-2 articulos mb-1">
+                        <div class="row">
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+
+
+                                <img src="./imgs/TestCarrito/HoodieAlien.png" class="img-fluid imagenArticulo"
+                                    alt="Responsive image">
+                            </div>
+
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+
+                                <p class="textoArticulos">Alien Hoodie para Mujer</p>
+                                <p>Talla: S</p>
+
+                            </div>
+
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-end">
+
+                                <p>$ 1,049.99</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="p-2 text-left border-2 articulos mb-1">
+                        <div class="row">
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+
+
+                                <img src="./imgs/TestCarrito/Collar.png" class="img-fluid imagenArticulo"
+                                    alt="Responsive image">
+                            </div>
+
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+
+                                <p class="textoArticulos">Collar LIEB para Mujer </p>
+                                <p>Talla: S</p>
+
+                            </div>
+
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-end">
+
+                                <p>$ 1,449.99</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="p-2 text-left border-2 articulos rounded-bottom-1 mb-1">
+                        <div class="row">
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+
+
+                                <img src="./imgs/TestCarrito/SudaderaRelaxed.png" class="img-fluid imagenArticulo"
+                                    alt="Responsive image">
+                            </div>
+
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+
+                                <p class="textoArticulos">Sudadera Relaxed fit para Hombre</p>
+                                <p>Talla: M</p>
+
+                            </div>
+
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-end">
+
+                                <p>$ 699.99</p>
+                            </div>
+
+                        </div>
+                    </div>
+                
+                </div>
+                <!-- <div class="col-sm-1 col-lg-1">
+                </div>
+                <br> -->
+
+
+                <div class="col-12 col-sm-5 col-md-4 col-lg-3 col-xl-3 ">
+
+                    <div class="sticky-top">
+                        <div class="p-2 text-left border-2 rounded-top-1 articulos mb-1 mt-1">
+
+                            <div>
+                                <h4>Resumen de Compra</h4>
+                            </div>
+                        </div>
+                        <div class="p-2 text-left border-2 articulos mb-1">
+                            <h4>Tu pedido se enviara a:</h4>
+                            <br>
+                            <p>Paseo de la Reforma #123
+                                Colonia Juarez
+                                Delegación Cuauhtémoc
+                                CP 06600</p>
+                        </div>
+                        <div class="p-2 text-left border-2 rounded-bottom-1 articulos mb-1 mt-1">
+                            <h3>Pagar</h3>
+                            <div class="row">
+                                <div class="col-1">
+                                    <br>
+                                    <p>
+                                        Articulos: 6
+                                        Envio: $0
+                                    </p>
+                                    <p>
+                                        Total: $ 6,199.94
+                                    </p>
+                                    <br>
+                                </div>
+
+
+                            </div>
+                            <div>
+                                <button type=" button" class="col-12 btn btn-outline-light btn-lg">
+                                    <img src="./imgs/OpcionesPago/VISAMasterCard.png" class="img-fluid formasDePago"
+                                        alt="Responsive image">
+                                </button>
+                                <p class="text-center">Visa MasterCard</p>
+                            </div>
+                            <div>
+                                <button type=" button" class="col-12 btn btn-outline-light btn-lg">
+                                    <img src="./imgs/OpcionesPago/PayPal.png" class=" img-fluid formasDePago"
+                                        alt="Responsive image">
+                                </button>
+                                <p class="text-center">PayPal</p>
+                            </div>
+                            <div>
+                                <button type=" button" class="col-12 btn btn-outline-light btn-lg">
+                                    <img src="/imgs/OpcionesPago/MercadoPago.png" class=" img-fluid formasDePago
+                        " alt="Responsive image">
+                                </button>
+                                <p class="text-center">MercadoPago</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</body>
+
+<div id="footer" style="height: 200px;">
+    <footer style="color: #393e46; margin-top: 1%;">
+        <div class="container text-start">
+            <div class="row">
+                <div class="col text-start">
+
+                    <ul style="list-style-type: none; text-align: left; list-style: none; padding-left: 0;">
+                        <span style="font-weight: bold;">Ayudas & Apoyo</span> <br><br>
+                        <div style="font-size: 0.8rem;">
+                            <li>Información de envío</li>
+                            <li>Devolución</li>
+                            <li>Cómo realizar el pedido</li>
+                            <li>Rastrear el pedido</li>
+                            <li>Guía de tallas</li>
+                            <li>FAQ</li>
+                            </di>
+                    </ul>
+
+                </div>
+                <div class="col text-start">
+
+                    <ul style="list-style-type: none; text-align: left; list-style: none; padding-left: 0;">
+                        <span style="font-weight: bold;">Servicio al Cliente</span> <br><br>
+                        <div style="font-size: 0.8rem;">
+                            <li>Información de envío</li>
+                            <li>Devolución</li>
+                            <li>Cómo realizar el pedido</li>
+                            <li>Rastrear el pedido</li>
+                            <li>Guía de tallas</li>
+                            <li>FAQ</li>
+                            </di>
+                    </ul>
+
+                </div>
+                <div class="col-3">
+
+                    <ul style="list-style-type: none; text-align: left; list-style: none; padding-left: 0;">
+                        <span style="font-weight: bold;">Únete a nuestras marcas</span> <br><br>
+                        <div style="font-size: 0.8rem;">
+                            <li>Información de envío</li>
+                            <li>Devolución</li>
+                            <li>Cómo realizar el pedido</li>
+                            <li>Rastrear el pedido</li>
+                            <li>Guía de tallas</li>
+                            <li>FAQ</li>
+                            </di>
+                    </ul>
+
+                </div>
+                <div class="col-6" style="width: 40%;">
+                    <span style="font-weight: bold;">Nuestras redes</span><br>
+                    <div class="row" style="display: inline-block; font-size: 1.3rem;">
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-facebook"></i>
+                        </di>
+                        <br><br>
+                        <div class="input-group mb-3" style="width: 500px;">
+                            <input type="text" class="form-control" placeholder="Recibe noticias de nuestros productos"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                                style="color: white; background-color: #393e46;">Subscribir</button>
+                        </div>
+                        <!-- <div class="row container" style="display: inline-block;">
+                            <input type="text" placeholder="Recibe noticias de nuestros productos" size="20" style="display: block;">
+                            <button style="float: right;">asdas</button> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+</div>
+
+</html>

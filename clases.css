@@ -1,0 +1,49 @@
+
+.colorNav{
+    background-color: #393E46;
+}
+
+.fondoPrincipal{
+
+    background-color: #eeeeee;
+
+}
+
+.scroll{
+    position: sticky;
+}
+
+.articulos{
+
+    background-color: #ffffff;
+
+}
+
+.formasDePago{
+    
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 200px;
+    
+}
+
+.imagenArticulo{
+
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    float: inline-start;
+
+}
+
+.textoArticulos{
+
+    font-weight: bold;
+
+}
+
+.botonPago{
+
+    align-self: center;
+}
