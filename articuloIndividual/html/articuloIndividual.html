@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículo individual</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="../css/articuloIndividual.css">
+    <!-- Font Raleway -->
+    <link rel="stylesheet" href="<link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Estilo en linea de galeria individual -->
+    <style>
+        .small-img-group {
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+        .small-img-col {
+            flex-basis: 24%;
+            cursor: pointer;
+        }
+
+        .sproduct select {
+            display: block;
+            padding: 5px 10px;
+        }
+
+        .buy-btn {
+            background: orange;
+            opacity: 1;
+            transition: 0.3s all;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- jquery and js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <!-- navegacion -->
+    <div id="page1">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navy">
+            <!-- todo lo que va después de navbar-expand-md que es donde se hace resposiva -->
+            <!-- es cosas de estilo -->
+            <div class="container-fluid">
+                <a class="navbar-brand ms-3" href="#navy">
+                    <span id="logo">ht&ml</span>
+                </a>
+                <button class="custom-toggler navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="custom-toggler navbar-toggler-icon" id="toggy"></span>
+                </button>
+
+                <!-- elementos de menu colapsable -->
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav me-auto ms-auto">
+                        <!-- En ul va la dirección de los items, si es me-auto se mueve a derecha-->
+                        <!-- si es izq se pone ms-auto y si no tiene nada es centro creo -->
+
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle navi" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown">Catálogo</a>
+                            <!-- Esto que le voy a poner abajo es el dropdown -->
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="" class="dropdown-item">urbaNOT</a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">Javucci</a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">JSpenny</a>
+                                </li>
+                                <li>
+                                    <hr class="text-black-50">
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">Catálogo completo</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link navi">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link navi">Contacto</a>
+                        </li>
+                    </ul>
+
+                    <!-- voy a poner este hr por que ps smn, pero no sé que es -->
+                    <hr class="text-white-50">
+
+                    <!-- son los íconos -->
+                    <ul class="navbar-nav flex-row flex-wrap text-light">
+                        <!-- creo que esta madre es para que se vean mejor -->
+                        <!-- navbar-nav es la clase de navbar, para que se tome con sus estilos -->
+                        <li class="nav-item col-6 col-md-auto p-3">
+                            <!-- lo que los col hacen es que ahuevo sea micha y micha -->
+                            <!-- el flex row es pa que cambien de row sin pedos -->
+                            <i class="bi bi-cart fa-2x navi_i" style="font-size: 1.2rem;"></i>
+                            <small class="ms-2 navi">0</small>
+                        </li>
+                        <!-- Login thingy -------------------------------------------------------------- -->
+                        <li class="nav-item col-6 col-md-auto p-3">
+                            <!-- Button trigger modal -->
+                            <button type="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="login">
+                                <i class="bi bi-person-circle navi_i" style="font-size: 1.2rem;"></i>
+                            </button>
+
+
+
+                        </li>
+                        <!--  ----------------------------------------------------------------------------->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Log in</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <!-- Modal thingy--------------------------------- -->
+                        <form>
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <input type="email" id="form2Example1" class="form-control"
+                                    placeholder="Email address" />
+                                <!-- <label class="form-label" for="form2Example1">Email address</label> -->
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <input type="password" id="form2Example2" class="form-control" placeholder="Password" />
+                                <!-- <label class="form-label" for="form2Example2">Password</label> -->
+                            </div>
+
+                            <!-- 2 column grid layout for inline styling -->
+                            <div class="row mb-4">
+                                <div class="col d-flex justify-content-center">
+                                    <!-- Checkbox -->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="form2Example31"
+                                            checked />
+                                        <label class="form-check-label" for="form2Example31"> Remember me </label>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <!-- Simple link -->
+                                    <a href="#!">Forgot password?</a>
+                                </div>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="button" class="btn btn-primary btn-block text-center" id="singin">Sign
+                                in</button>
+
+                            <!-- Register buttons -->
+                            <div class="text-center">
+                                <p>Not a member? <a href="#!">Register</a></p>
+                            </div>
+                        </form>
+
+                        <!-- ------------------------------------------ -->
+                    </div>
+                    <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="svch">Save changes</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- termina navegacion -->
+
+
+
+        <!--! articulo individual -->
+
+        <section class=" container sproduct my-5 pb-5">
+            <!--TODO Galeria parte izquierda -->
+            <div class="row mt-5">
+                <div class="col-lg-5 col-md-12 col-12">
+                    <img class="img-fluid w-100 pb-1" src="../img/camisa4c/1_blue.PNG" id="MainImg" alt="">
+
+                    <div class="small-img-group">
+                        <!--TODO imagen pequeña 1 -->
+                        <div class="small-img-col">
+                            <img src="../img/camisa4c/1_blue.PNG" width="100%" class="small-img" alt="">
+                        </div>
+                        <!--TODO imagen pequeña 2 -->
+                        <div class="small-img-col">
+                            <img src="../img/camisa4c/2_blue.PNG" width="100%" class="small-img" alt="">
+                        </div>
+                        <!--TODO imagen pequeña 3 -->
+                        <div class="small-img-col">
+                            <img src="../img/camisa4c/3_blue.PNG" width="100%" class="small-img" alt="">
+                        </div>
+                        <!--TODO imagen pequeña 4 -->
+                        <div class="small-img-col">
+                            <img src="../img/camisa4c/4_blue.PNG" width="100%" class="small-img" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!--TODO Informacion galeria parte derecha -->
+                <div class="col-lg-6 col-md-12 col-12">
+                    <h5>Marca: urbaNOT</h5>
+                    <h3>Camisa solida sin estampado de algodón transpirable</h3>
+                    <h6 class="mt-5 mb-0">SKU: PLAYS3C001</h6>
+                    <div class="starsAndReviews">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="reviews">
+                            <h6>(800+ Reviews)</h6>
+                        </div>
+                    </div>
+                    <hr class="mt-0">
+                    <h2>$289.00</h2>
+
+                    <!--TODO agregar colores interactivos -->
+                    <div class="color-content">
+                        <h3>select color</h3>
+                        <div class="color-groups">
+                            <div class="color color-white active-color"></div>
+                            <div class="color color-black"></div>
+                            <div class="color color-yellow"></div>
+                            <div class="color color-blue"></div>
+                            <div class="color color-red"></div>
+                        </div>
+                    </div>
+
+
+                    <select class="my-3">
+                        <option>Selecciona talla</option>
+                        <option>CH</option>
+                        <option>M</option>
+                        <option>G</option>
+                    </select>
+                    <h4>Guia de tallas</h4>
+                    <h4>Avisar disponibilidad</h4>
+                    <button class="buy-btn">Añadir a carrito</button>
+                    <!--* Detalles de envio y garantia -->
+                    <h4 class="mt-5 mb-2">Envio gratuito</h4>
+                    <span>Envio grauito para pedidos mayores a MXN200</span>
+                    <span>Entrega de 2-4 días hábiles</span>
+                    <h4>Devolución gratis</h4>
+                    <a href="#">Ver detalles</a>
+
+                    <!--TODO Colapso botones -->
+
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Descripción
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p> Color: Burdeos</p>
+                                    <p> Estilo: Casual</p>
+                                    <p> Tipo de Estampado: Liso</p>
+                                    <p> Tipo: Camisa</p>
+                                    <p> Escote: Cuello Camisero</p>
+                                    <p> Detalles: Botón delantero</p>
+                                    <p> Longitud de la Manga: manga corta</p>
+                                    <p> Tipos de Manga: Manga normal</p>
+                                    <p> Longitud: Normal</p>
+                                    <p> Tipo de ajuste: Regular</p>
+                                    <p> Tejido: No-Elástico</p>
+                                    <p> Material: Satén</p>
+                                    <p> Composición: 100% Poliéster</p>
+                                    <p> Instrucciones de Cuidado: Lavadora, no limpiar en seco</p>
+                                    <p> Transparente: No</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Detalles de envio
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by
+                                    default, until the collapse plugin adds the appropriate classes that we use to
+                                    style each element. These classes control the overall appearance, as well as the
+                                    showing and hiding via CSS transitions. You can modify any of this with custom
+                                    CSS or overriding our default variables. It's also worth noting that just about
+                                    any HTML can go within the <code>.accordion-body</code>, though the transition
+                                    does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Cuidados
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by
+                                    default, until the collapse plugin adds the appropriate classes that we use to
+                                    style each element. These classes control the overall appearance, as well as the
+                                    showing and hiding via CSS transitions. You can modify any of this with custom
+                                    CSS or overriding our default variables. It's also worth noting that just about
+                                    any HTML can go within the <code>.accordion-body</code>, though the transition
+                                    does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+    </div>
+    </section>
+
+    <!--! Lo más vendido del mes -->
+    <section id="featured">
+        <!-- agregar margen con respecto a otros elementos -->
+        <div class="container text-center mt-5 py-5">
+            <h3>Lo más vendido del mes</h3>
+            <hr class="mx-auto">
+
+        </div>
+        <div class="row mx-auto container-fluid">
+            <!--* Producto 1 sudadera1 -->
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="../img/masVendido/1.jpg" alt="">
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h5 class="p-name">Sudadera de lana</h5>
+                <h4 class="p-price">$MXN 428 </h4>
+                <button class="buy-btn">Ver detalles</button>
+            </div>
+            <!--* Producto 2 pantalon -->
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="../img/masVendido/2.jpg" alt="">
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h5 class="p-name">Sudadera de lana</h5>
+                <h4 class="p-price">$MXN 428 </h4>
+                <button class="buy-btn">Ver detalles</button>
+            </div>
+            <!--* Producto 3 playera -->
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="../img/masVendido/3.jpg" alt="">
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h5 class="p-name">Sudadera de lana</h5>
+                <h4 class="p-price">$MXN 428 </h4>
+                <button class="buy-btn">Ver detalles</button>
+            </div>
+            <!-- Producto 4 playera -->
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="../img/masVendido/4.jpg" alt="">
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h5 class="p-name">Sudadera de lana</h5>
+                <h4 class="p-price">$MXN 428 </h4>
+                <button class="buy-btn">Ver detalles</button>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!--TODO Mostrar en grande imagen pequeña -->
+    <script>
+        var MainImg = document.getElementById('MainImg');
+        var smallImg = document.getElementsByClassName('small-img');
+
+        smallImg[0].onclick = function () {
+            MainImg.src = smallImg[0].src;
+        }
+
+        smallImg[1].onclick = function () {
+            MainImg.src = smallImg[1].src;
+        }
+
+        smallImg[2].onclick = function () {
+            MainImg.src = smallImg[2].src;
+        }
+
+        smallImg[3].onclick = function () {
+            MainImg.src = smallImg[3].src;
+        }
+
+    </script>
+
+    <script src="..//js/articuloIndividual.js"></script>
+
+</body>
+
+</html>

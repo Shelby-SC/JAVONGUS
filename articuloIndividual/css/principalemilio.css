@@ -1,0 +1,62 @@
+
+#page{
+    font-family: Raleway;
+    color: #ffffff;
+    padding: 0;
+    margin:0;
+    width: 100%;
+    background-color: #ff4d49;;
+    
+}
+#logo{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+
+#index_nav{
+    background-color: #ff4d49;
+    color: #ffffff;
+    
+}
+
+.dropdown-item{
+    background-color: black;
+    color: black;
+    
+}
+
+.navi{
+    color: rgb(255, 255, 255);
+}
+
+
+
+img{
+    max-width: 100%;
+    
+}
+
+#bod{
+    background-color: #ff4d49;
+}
+
+#navy{
+    margin: 0;
+    padding:0;
+    max-width: 100%;
+}
+
+#logo_2{
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 1200px){
+    #urbanot1{
+        content: url(/imgs/urba6.png);
+    }
+}
