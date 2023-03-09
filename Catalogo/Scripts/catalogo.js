@@ -6,28 +6,28 @@ fetch('../dataBase/datos.json')
     jsonData = data;
 });
 
-//Funcion para la creacion de elementos
-const buildElement=el=>{
-    return document.createElement(el)
+//Funcion para la creacion de elementos, el cual recibe dos parametros, uno para el tipo 
+//de elemento que queremos crear, y otro para la clase que se le dara 
+const buildElement=(element, clas)=>{
+    let elemento=document.createElement(element)
+    elemento.classList.add(clas)
+    return elemento
 }
 //Funcion para la creacion de las tarjetas de productos
+let container=document.getElementById('section')
 const buildCard=item=>{
             //Creacion de los elementos de cada producto
-            let cardProduct=buildElement('div')
-            let imgF=buildElement("img")
-            let imgB=buildElement("img")
-            let divIm=buildElement('div')
+            let cardProduct=buildElement('div',"cardProduct")
+            let imgF=buildElement("img", ('card',"front"))
+            let imgB=buildElement("img",('card', "back"))
+            let divIm=buildElement('div','divImg')
             let title=buildElement('h5')
             let divTitle=buildElement('div')
-            let description=buildElement('div')
+            let description=buildElement('div',"description")
             let price=buildElement('p')
             let brand=buildElement('p')
-            //Adición de clases para las tarjetas de producto 
-            imgB.classList.add('back','card')
-            cardProduct.classList.add('cardProduct')
-            imgF.classList.add('front','card')
-            divIm.classList.add('divImg')
-            description.classList.add('description')
+            imgB.draggable=false
+            imgF.draggable=false
             //Adicion de atributos y texto a los elementos
             price.innerHTML=`$${item.price}`
             brand.innerHTML=`Marca ${item.marca}`
@@ -57,8 +57,16 @@ const buildCard=item=>{
 }
 
 
+
+
+
+const filtrar=()=>{
+    del()
+    writeWithFilters()
+}
+
 //Funcion para iterar sobre el archivo JSON y llenar el DOM acorde a la base de datos
-let container=document.getElementById('section')
+
 const postProducts=()=>{
     //setTimeout para esperar el resultado de fetc fetch
     setTimeout(() => {
@@ -69,20 +77,6 @@ const postProducts=()=>{
     }, 1000); 
 }
 
-
-
-
-//Function para crear los circulos para la eleccion del color
-const drawCircle=(iitem, divcol,id)=>{
-    let circle=document.createElement('div')
-    circle.classList.add('circle')
-    let back=iitem.back
-    let front=iitem.front
-    circle.style.backgroundColor=(`${iitem.hexa}`)
-    circle.addEventListener('click', ()=>{changeColor(`${id}`, front, back)})
-    divcol.append(circle)
-    circle.parentNode.childNodes[0].classList.add('selected')
-}
 
 
 //Funcion que se agrega a los circulos para cambiar de color
@@ -96,14 +90,30 @@ const changeColor=(nodo,srcFront,srcBack)=>{
     }
     event.target.classList.add('selected')
 }
+
+//Function para crear los circulos para la eleccion del color
+const drawCircle=(iitem, divcol,id)=>{
+    let circle=document.createElement('div')
+    circle.classList.add('circle')
+    let back=iitem.back
+    let front=iitem.front
+    circle.style.background=(`${iitem.hexa}`)
+    circle.addEventListener('click', ()=>{changeColor(`${id}`, front, back)})
+    divcol.append(circle)
+    circle.parentNode.childNodes[0].classList.add('selected')
+}
+
+
 //Funcion que limpia todos los filtros
 const cleanFilters=()=>{
     let checks=document.querySelectorAll('.check')
     for(let i=0;i<checks.length;i++){
         checks[i].checked=false
     }
-    document.querySelectorAll('.rangePrice')[0].value=0
+    document.querySelectorAll('.rangePrice')[0].value=100
     document.querySelectorAll('.rangePrice')[1].value=1500
+    valueMax.innerHTML=`$${rangeMax.value}`
+    valueMin.innerHTML=`$${rangeMin.value}`
 }
 
 //Funcion para imprimir en el DOM el valor de los input range
@@ -119,68 +129,82 @@ const writePrice=(node)=>{
     if(valMin>valMax){
         rangeMin.value=valMax
         rangeMax.value=valMin
-        valueMax.innerHTML=`$${rangeMax}`
-        valueMin.innerHTML=`$${rangeMin}`
+        valueMax.innerHTML=`$${rangeMax.value}`
+        valueMin.innerHTML=`$${rangeMin.value}`
     }else{
     node.innerHTML=`$${event.target.value}`
     }}
 rangeMin.addEventListener("change",()=>{writePrice(valueMin)})
 rangeMax.addEventListener("change",()=>{writePrice(valueMax)})
 
-window.addEventListener('load',postProducts)
-window.addEventListener('load',cleanFilters)
 
 
 
+//Funcion que permite limpiar el Dom de los articulos
+const del=()=>{
+    let cards=document.querySelectorAll('.cardProduct')
+    for(let i=0;i<cards.length;i++){
+        cards[i].remove()
+    }
+}
 
 
+//Esta fuuncion permite insertar en el DOM los productos que cumplen con la condicion de los filtros
+const writeWithFilters=()=>{
+    let filters=filter()
+    for(item of jsonData){
+            if(filter('.brand',item.category)&&filter('.gender',item.category)&&filter('.type', item.category)
+        &&(item.price>=Number(rangeMin.value)&&item.price<=Number(rangeMax.value))){
+            buildCard(item)
+        }
+    }
+    //Esta condicion permite agregar un mensajen en caso de no haber productos con los filtros seleccionados 
+    if(document.querySelectorAll(".cardProduct").length==0&&document.querySelector('.mensajeError')==null){
+        let mensaje=buildElement('div')
+        mensaje.innerHTML='No se encontraron productos con esas especificaciones'
+        mensaje.classList.add("mensajeError")
+        container.append(mensaje)
+    }else{if(document.querySelector('.mensajeError')!=null&&document.querySelectorAll(".cardProduct").length!=0){document.querySelector('.mensajeError').remove()}}
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const filtrar=()=>{
+//Funcion especial para el boton de limpiar filtros
+const limpiarFiltros=()=>{
+    cleanFilters()
     del()
     writeWithFilters()
 }
+let botonClean=document.getElementById('clean')
+botonClean.addEventListener('click', limpiarFiltros)
 
 
 
-
-
-let siVacios
-const filter=()=>{
-    let filtros=[];  
-    let chequeados=[]
-    let checks=document.querySelectorAll('.check')
-    
+//Esta funcion permite verificar uno a uno en que categoria estan incluidos los productos
+//De esta manera, si el filtro esta seleccinado con dos categorias
+//Se tendran que cumplir ambas condiciones para que el producto se muestre
+const filter=(clas,target)=>{
+    let selected=[]
+    let checks=document.querySelectorAll(clas)
+    console.clear()
     for(let i=0;i<checks.length;i++){
         if(checks[i].checked){
-            filtros.push(checks[i].value)
-            chequeados.push(checks[i].checked)
+            selected.push(checks[i].value)
         }
     }
-    if(chequeados.length==0){ siVacios=true}
-    else{siVacios=false}
-    console.log(siVacios)
-    return filtros
-    
+    if(selected.some(catego=>target.includes(catego))){return(true)}
+    else if(selected.length==0){return(true)}
+    else{return(false)}
 }
+
+
+
+
+
+
+
+
+
+
+//Aqui se le agregan a todos los inputs le funcion de filtrado, permite agregar tantos check box como sea neccesario
 let check=document.querySelectorAll('.check')
 for(let i=0;i<check.length;i++){
     check[i].addEventListener('change', filter)
@@ -190,22 +214,8 @@ rangeMin.addEventListener("change",filtrar)
 rangeMax.addEventListener("change",filtrar)
 
 
-const del=()=>{
-    let cards=document.querySelectorAll('.cardProduct')
-    for(let i=0;i<cards.length;i++){
-        cards[i].remove()
-    }
-}
-const writeWithFilters=()=>{
-    let filters=filter()
-    for(item of jsonData){
-        if((filters.some(fil=>item.category.includes(fil))||siVacios)&&(item.price>=Number(rangeMin.value)&&item.price<=Number(rangeMax.value))){
-            buildCard(item)
-        }
-    }
-}
-
-
-
-
+//Aqui se agregan funciones a la ventana para que al recargar, se limpien los filtros 
+//y se carguen de nuevo todos los articulos
+window.addEventListener('load',postProducts)
+window.addEventListener('load',cleanFilters)
 
