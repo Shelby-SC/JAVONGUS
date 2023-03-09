@@ -1,4 +1,4 @@
-[![MasterHead](https://i.imgur.com/H26eiS5.png)
+![MasterHead](https://i.imgur.com/H26eiS5.png)
 
 <h1 align="center">Hi 👋, We are the Team Javongus!</h1>
 <h3 align="center">We are passionate Java full stack developers from México.</h3>
