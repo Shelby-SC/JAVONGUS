@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/Style/catalogo.css">
+    <link rel="stylesheet" href="/Style/filtros.css">
 </head>
 <body id="page">
     <!-- CONTAINER FLUID -->
@@ -94,27 +95,96 @@
                 </p>
                 <div style="min-height: 120px; "style="background-color: #393e46; ">
                     <div class="collapse collapse-horizontal dropdown"  id="collapseWidthExample" style="height: 70vh; overflow: scroll; overflow-x: hidden;" >
-                        <ul  style="width: 200px; background-color: #393e46; padding-left: 20%;" class="list-unstyled">
+                        <ul  style="width: 200px; background-color: #393e46; padding-left: 10%;" class="list-unstyled">
                             <li ><h4>Marca</h4></li>
-                            <li><input type="checkbox" class="check" value="Javucci" name="" id=""> Javucci</li>
-                            <li><input type="checkbox" class="check" name="" value="JSPenny" id=""> JSPenny</li>
-                            <li><input type="checkbox" class="check" name="" value="UrbaNOT" id=""> UrbaNOT</li>
+                            <li>
+                                <label role="button" for="checkBox1" class="switch">
+                                    <input type="checkbox" class="check brand" id="checkBox1" value="Javucci" name="" > 
+                                    <span class="switch__ball"></span>
+                                    <i class="ri-sun-line switch__sun"></i>
+                                    <i class="ri-moon-line switch__moon"></i>
+                                </label>
+                                Javucci 
+                            </li>
+                            <li>
+                                <label role="button" for="checkBox2" class="switch">
+                                    <input type="checkbox" class="check brand" name="" value="JSPenny" id="checkBox2">
+                                    <span class="switch__ball"></span>
+                                    <i class="ri-sun-line switch__sun"></i>
+                                    <i class="ri-moon-line switch__moon"></i>
+                                </label>
+                                JSPenny
+                            </li>
+                            <li>
+                                <label role="button" for="checkBox3" class="switch">
+                                    <input type="checkbox" class="check brand" name="" value="UrbaNOT" id="checkBox3">
+                                    <span class="switch__ball"></span>
+                                    <i class="ri-sun-line switch__sun"></i>
+                                    <i class="ri-moon-line switch__moon"></i>
+                                </label>
+                                UrbaNOT
+                            </li>
                         </ul>
-                        <ul  style="width: 200px; background-color: #393e46; padding-left: 20%;" class="list-unstyled">
-                            <li ><h4>Marca</h4></li>
-                            <li><input type="checkbox" class="check" name="" id=""> Javucci</li>
-                            <li><input type="checkbox" class="check" name="" id=""> JSPenny</li>
-                            <li><input type="checkbox" class="check" name="" id=""> UrbaNOT</li>
+                        <ul  style="width: 200px; background-color: #393e46; padding-left: 10%;" class="list-unstyled">
+                            <li ><h4>Genero</h4></li>
+                            <li>
+                                <label role="button" for="checkBox4" class="switch">
+                                    <input type="checkbox" class="check gender" name="" value="hombre" id="checkBox4">
+                                    <span class="switch__ball"></span>
+                                    <i class="ri-sun-line switch__sun"></i>
+                                    <i class="ri-moon-line switch__moon"></i>
+                                </label>
+                                Hombre
+                            </li>
+                            <li>
+                                <label role="button" for="checkBox5" class="switch">
+                                    <input type="checkbox" class="check gender" name="" value="mujer" id="checkBox5">
+                                    <span class="switch__ball"></span>
+                                    <i class="ri-sun-line switch__sun"></i>
+                                    <i class="ri-moon-line switch__moon"></i>
+                                </label>
+                                Mujer
+                            </li>
                         </ul>
-                        <ul  style="width: 200px; background-color: #393e46; padding-left: 20%;" class="list-unstyled">
+                        <ul  style="width: 200px; background-color: #393e46; padding-left: 10%;" class="list-unstyled">
+                            <li ><h4>Tipo</h4></li>
+                            <li>
+                                <label role="button" for="checkBox6" class="switch">
+                                    <input type="checkbox" class="check type" name="" value="top" id="checkBox6">
+                                    <span class="switch__ball"></span>
+                                    <i class="ri-sun-line switch__sun"></i>
+                                    <i class="ri-moon-line switch__moon"></i>
+                                </label>
+                                Top
+                            </li>
+                            <li>
+                                <label role="button" for="checkBox7" class="switch">
+                                    <input type="checkbox" class="check type" name="" value="bottom" id="checkBox7">
+                                    <span class="switch__ball"></span>
+                                    <i class="ri-sun-line switch__sun"></i>
+                                    <i class="ri-moon-line switch__moon"></i>
+                                </label>
+                                Bottom
+                            </li>
+                            <li>
+                                <label role="button" for="checkBox8" class="switch">
+                                    <input type="checkbox" class="check type" name="" value="accesorios" id="checkBox8">
+                                    <span class="switch__ball"></span>
+                                    <i class="ri-sun-line switch__sun"></i>
+                                    <i class="ri-moon-line switch__moon"></i>
+                                </label>
+                                Accesories
+                            </li>
+                        </ul>
+                        <ul  style="width: 200px; background-color: #393e46; padding-left: 10%;" class="list-unstyled">
                             <li ><h4>Precio</h4></li>
-                            <li style="display: flex; justify-content: space-evenly;"><h6>Min</h6><h6 class="price">$0</h6></li>
+                            <li style="display: flex; justify-content: space-evenly;"><h6>Min</h6><h6 class="price">$100</h6></li>
                             <li><input class="rangePrice" type="range" style="width: 80%;" min="100" max="1500"></li>
                             <li style="display: flex; justify-content: space-evenly;"><h6>Max</h6><h6 class="price">$1500</h6></li>
                             <li><input  class="rangePrice" type="range" style="width: 80%;" min="100" max="1500"></li>
                         </ul>
-                        <ul  style="width: 200px; background-color: #393e46; padding-left: 20%;" class="list-unstyled">
-                            <li><button class="clean">Limpiar Filtros</button></li>
+                        <ul  style="width: 200px; background-color: #393e46; padding-left: 10%;" class="list-unstyled">
+                            <li><a  class="button" id="clean">Limpiar Filtros</a></li>
                         </ul>
                     </div>
                     </div>
