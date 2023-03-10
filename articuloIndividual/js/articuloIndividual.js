@@ -44,4 +44,6 @@ function toggleTable() {
   }
 }
 
-// boton
+// footer responsive
+
+
