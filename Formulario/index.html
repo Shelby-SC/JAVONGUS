@@ -10,83 +10,84 @@
   <title>Formulario de registro</title>
 
 </head>
-<body class="bg">
-
-  <!-- ************************** Comienzo del Nav bar ************************** -->
-  <section id="page">
-    <!-- CONTAINER FLUID -->
+ <!-- ************************** Comienzo del Nav bar ************************** -->
+ <section id="page">
+  <!-- CONTAINER FLUID -->
 <!-- <div class="container-fluid"> -->
 <nav class="navbar navbar-expand-md navbar-dark">
-    <!-- todo lo que va después de navbar-expand-md que es donde se hace resposiva -->
-    <!-- es cosas de estilo -->
-    <div class="container-fluid">
-        <a class = "navbar-brand ms-3" href="#">
-            <span id="logo">ht&ml</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-        data-bs-target="#menu" aria-controls="navbarSupportedContent"
-         aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+  <!-- todo lo que va después de navbar-expand-md que es donde se hace resposiva -->
+  <!-- es cosas de estilo -->
+  <div class="container-fluid">
+      <a class = "navbar-brand ms-3" href="#">
+          <span id="logo">ht&ml</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#menu" aria-controls="navbarSupportedContent"
+       aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- elementos de menu colapsable -->
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav me-auto ms-auto">
-            <!-- En ul va la dirección de los items, si es me-auto se mueve a derecha-->
-            <!-- si es izq se pone ms-auto y si no tiene nada es centro creo -->
+      <!-- elementos de menu colapsable -->
+      <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav me-auto ms-auto">
+          <!-- En ul va la dirección de los items, si es me-auto se mueve a derecha-->
+          <!-- si es izq se pone ms-auto y si no tiene nada es centro creo -->
 
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle navi" 
-                    id="navbarDropdown" role="button" 
-                    data-bs-toggle="dropdown">Catálogo</a>
-                    <!-- Esto que le voy a poner abajo es el dropdown -->
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="" class="dropdown-item">Ex1</a>
-                        </li>
-                        <li>
-                            <a href="" class="dropdown-item">Ex2</a>
-                        </li>
-                        <li>
-                            <a href="" class="dropdown-item">Ex3</a>
-                        </li>
-                    </ul>
-                </li>
+              <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle navi" 
+                  id="navbarDropdown" role="button" 
+                  data-bs-toggle="dropdown">Catálogo</a>
+                  <!-- Esto que le voy a poner abajo es el dropdown -->
+                  <ul class="dropdown-menu">
+                      <li>
+                          <a href="" class="dropdown-item">Ex1</a>
+                      </li>
+                      <li>
+                          <a href="" class="dropdown-item">Ex2</a>
+                      </li>
+                      <li>
+                          <a href="" class="dropdown-item">Ex3</a>
+                      </li>
+                  </ul>
+              </li>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link navi">Sobre nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link navi">Contacto</a>
-                </li>
-            </ul>
+              <li class="nav-item">
+                  <a href="#" class="nav-link navi">Sobre nosotros</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link navi">Contacto</a>
+              </li>
+          </ul>
 
-            <!-- voy a poner este hr por que ps smn, pero no sé que es -->
-            <hr class="text-white-50">
+          <!-- voy a poner este hr por que ps smn, pero no sé que es -->
+          <hr class="text-white-50">
 
-            <!-- son los íconos -->
-            <ul class="navbar-nav flex-row flex-wrap text-light">
-                <!-- creo que esta madre es para que se vean mejor -->
-                <!-- navbar-nav es la clase de navbar, para que se tome con sus estilos -->
-                <li class="nav-item col-6 col-md-auto p-3">
-                    <!-- lo que los col hacen es que ahuevo sea micha y micha -->
-                    <!-- el flex row es pa que cambien de row sin pedos -->
-                    <i class="bi bi-cart fa-2x" style="font-size: 1.2rem;"></i>
-                    <small class="ms-2 navi">0</small>
-                </li>
-                <li class="nav-item col-6 col-md-auto p-3">
-                    <i class="bi bi-person-circle" style="font-size: 1.2rem;"></i>
-                </li>                        
-            </ul>
-        </div>
-    </div>
+          <!-- son los íconos -->
+          <ul class="navbar-nav flex-row flex-wrap text-light">
+              <!-- creo que esta madre es para que se vean mejor -->
+              <!-- navbar-nav es la clase de navbar, para que se tome con sus estilos -->
+              <li class="nav-item col-6 col-md-auto p-3">
+                  <!-- lo que los col hacen es que ahuevo sea micha y micha -->
+                  <!-- el flex row es pa que cambien de row sin pedos -->
+                  <i class="bi bi-cart fa-2x" style="font-size: 1.2rem;"></i>
+                  <small class="ms-2 navi">0</small>
+              </li>
+              <li class="nav-item col-6 col-md-auto p-3">
+                  <i class="bi bi-person-circle" style="font-size: 1.2rem;"></i>
+              </li>                        
+          </ul>
+      </div>
+  </div>
 </nav>
 </section> <!-- ************************ Cierre del navbar *************************** -->
 
 
 
+<body class="bg">
+
+
 <!-- ************************** INICIO FORMULARIO ****************************** -->
-  <form action="#" class="form" style="background-image: url(/imags/ht&ml-fondo.png);">
+  <form action="" class="form" style="background-image: url(/imags/ht&ml-fondo.png);" id="contact-form">
 
     <div class="container">
     
@@ -100,19 +101,19 @@
       <div class="row">  
         <div class="col-3 order-1 offset-6">
           <label for="FirstName" class="form-label">Nombre(s)</label> 
-          <input type="text" placeholder="Chuchito" name="nombres" class="form-control" required>
+          <input type="text" placeholder="Coco" name="nombres" class="form-control" required id="name">
 
           <label for="email" class="form-label">Email</label>
-          <input type="email" placeholder="Email" name="email" class="form-control" required>
+          <input type="email" placeholder="Email" name="email" id="email" class="form-control" required>
         </div> 
 
         
         <div class="col-3 order-2">
           <label for="LastName" class="form-label">Apellido(s)</label>
-            <input type="text" placeholder="Carmona" name="apellidos" class="form-control" required>
+            <input type="text" placeholder="Channel" name="apellidos" id="apellido"  class="form-control" required>
 
             <label for="password" class="form-label">Contraseña</label>
-            <input type="password" placeholder="Contraseña" name="contraseña" class="form-control" required>
+            <input type="password" placeholder="Contraseña" name="contraseña" class="form-control" id="password" required>
         </div>
       </div> <!-- CLOSE -->
       
@@ -128,12 +129,12 @@
               <div class="col text-center">
                 <button type="button" class="btn" 
                 style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 5rem; --bs-btn-font-size: 1.2rem; 
-                font-family: Raleway; font-weight:bolder;">
+                font-family: Raleway; font-weight:bolder;" onclick="validateForm();">
                 Registrarse
                 </button>
               </div>
               </div>
-
+              <div class="status"></div>
 
               <hr>
               <br>
@@ -155,7 +156,7 @@
 
   </form>
 
-  <script src=""></script>
+  <script src="./validacion.js"></script>
 </body>
 
 <div id="footer" style="height: 200px;">
@@ -221,9 +222,7 @@
               <button class="btn btn-outline-secondary" type="button" id="button-addon2"
                 style="color: white; background-color: #393e46;">Subscribir</button>
             </div>
-            <!-- <div class="row container" style="display: inline-block;">
-                          <input type="text" placeholder="Recibe noticias de nuestros productos" size="20" style="display: block;">
-                          <button style="float: right;">asdas</button> -->
+         
           </div>
 
         </div>
