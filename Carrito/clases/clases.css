@@ -1,10 +1,20 @@
 
-.colorNav{
-    background-color: #393E46;
+.negritas{
+
+    font-weight: bold;
+
+}
+
+#navy{
+    background-color: #393e46;
+    margin: 0;
+
+    padding:0;
+    max-width: 100%;
 }
 
 .fondoPrincipal{
-
+    font-family: Raleway;
     background-color: #eeeeee;
 
 }
@@ -16,6 +26,7 @@
 .articulos{
 
     background-color: #ffffff;
+    border-style: none;
 
 }
 
@@ -37,6 +48,10 @@
 
 }
 
+.negritas{
+    font-weight: bold;
+}
+
 .textoArticulos{
 
     font-weight: bold;
@@ -48,7 +63,8 @@
     align-self: center;
 }
 
-botonArticulos{
+.botonImg{
+
+    border-style: none;
 
 }
-
