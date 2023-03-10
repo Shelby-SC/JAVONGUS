@@ -80,26 +80,19 @@
         
                             <!-- son los íconos -->
                             <ul class="navbar-nav flex-row flex-wrap text-light">
-                                <!-- creo que esta madre es para que se vean mejor -->
-                                <!-- navbar-nav es la clase de navbar, para que se tome con sus estilos -->
                                 <li class="nav-item col-6 col-md-auto p-3">
-                                    <!-- lo que los col hacen es que ahuevo sea micha y micha -->
-                                    <!-- el flex row es pa que cambien de row sin pedos -->
-                                    <a href="../Carrito/pags/carrito.html" style="text-decoration: none;color: inherit"><i class="bi bi-cart fa-2x navi_i" style="font-size: 1.2rem;"></i><a >
-                                    <small class="ms-2 navi">6</small>
+                                    <a href="../Carrito/pags/carrito.html" style="text-decoration: none;color: inherit" class="d-flex"> <!-- Agrega la clase "d-flex" aquí -->
+                                        <i class="bi bi-cart fa-2x navi_i" style="font-size: 1.2rem;"></i>
+                                        <small class="ms-2 navi">6</small>
+                                    </a>
                                 </li>
-                                <!-- Login thingy -------------------------------------------------------------- -->
                                 <li class="nav-item col-6 col-md-auto p-3">
-                                    <!-- Button trigger modal -->
-                                        <button type="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="login">
-                                            <i class="bi bi-person-circle navi_i" style="font-size: 1.2rem;"></i>
-                                        </button>
-
-                                        
-                                    
-                                </li>   
-                                <!--  ----------------------------------------------------------------------------->
+                                    <button type="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="login">
+                                        <i class="bi bi-person-circle navi_i" style="font-size: 1.2rem;"></i>
+                                    </button>
+                                </li>
                             </ul>
+                            
                         </div>
                     </div>
                 </nav>
