@@ -44,13 +44,7 @@ img{
     background-color: #ff4d49;
 }
 
-#navy{
-    background-color: #ff4d49;
-    margin: 0;
-    
-    padding:0;
-    max-width: 100%;
-}
+
 
 #logo_2{
     height: 40px;
@@ -111,11 +105,6 @@ html, body, #wrapper {
     position: relative;
   }
 
-  #login{
-    background-color: #FF4D48;
-    border-style: none;
-    color: #ffffff;
-  }
 
   #exampleModal2{
     color: black;
