@@ -7,6 +7,7 @@
         "descripcion": "Camisa Poker bi color",
         "codigo": "12938",
         "category": "camisas hombre UrbaNOT top",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/pokerBeigefront.webp",
@@ -28,6 +29,7 @@
         "descripcion": "Camisa estampado negro",
         "codigo": 12923,
         "category": "camisas hombre UrbaNOT top",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/estampBlackFront.webp",
@@ -43,6 +45,7 @@
         "price":289.00,
         "descripcion":"Camisa lisa sin estampado",
         "category":"camisas hombre UrbaNOT top",
+        "url":"/articuloIndividual/html/articuloIndividual.html",
         "colors":{
             "color1":{
                 "front":"../dataBase/camisaWhiteFront.png",
@@ -69,6 +72,7 @@
         "descripcion": "Camisa floreada hombre",
         "codigo": "12922",
         "category": "camisas hombre UrbaNOT top",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/floresRedFront.webp",
@@ -95,6 +99,7 @@
         "descripcion": "Top estampado de colores",
         "codigo": "45234",
         "category": "mujer JSPenny top",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/topBlackFront.webp",
@@ -116,6 +121,7 @@
         "descripcion": "Jeans Mujer",
         "codigo": "45246",
         "category": "mujer JSPenny bottom",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/jeansBlueFront.webp",
@@ -137,6 +143,7 @@
         "descripcion": "Blusa a cuadros",
         "codigo": "45098",
         "category": "mujer JSPenny top ",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/blouseOrangeFront.webp",
@@ -158,6 +165,7 @@
         "descripcion": "Blusa a cuadros",
         "codigo": "45675",
         "category": "mujer JSPenny  top",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/blouseTopFront.webp",
@@ -173,6 +181,7 @@
         "descripcion": "Colar lalalalal",
         "codigo": "00923",
         "category": "mujer Javucci  hombre accesorios ",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/collarMoneyFront.webp",
@@ -189,6 +198,7 @@
         "descripcion": "Cap hapy lalala",
         "codigo": "00853",
         "category": "mujer Javucci hombre accesorios ",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/capHappyFront.webp",
@@ -205,6 +215,7 @@
         "descripcion": "Diademas perlas lalala",
         "codigo": "00472",
         "category": "mujer Javucci accesorios ",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/diademaPerlasFront.webp",

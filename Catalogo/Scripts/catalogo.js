@@ -6,6 +6,8 @@ fetch('../dataBase/datos.json')
     jsonData = data;
 });
 
+
+
 //Funcion para la creacion de elementos, el cual recibe dos parametros, uno para el tipo 
 //de elemento que queremos crear, y otro para la clase que se le dara 
 const buildElement=(element, clas)=>{
@@ -21,13 +23,14 @@ const buildCard=item=>{
             let imgF=buildElement("img", ('card',"front"))
             let imgB=buildElement("img",('card', "back"))
             let divIm=buildElement('div','divImg')
-            let title=buildElement('h5')
+            let title=buildElement('a')
             let divTitle=buildElement('div')
             let description=buildElement('div',"description")
             let price=buildElement('p')
             let brand=buildElement('p')
             imgB.draggable=false
             imgF.draggable=false
+            title.href=item.url
             //Adicion de atributos y texto a los elementos
             price.innerHTML=`$${item.price}`
             brand.innerHTML=`Marca ${item.marca}`

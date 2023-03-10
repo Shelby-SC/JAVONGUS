@@ -89,6 +89,12 @@ img{
     overflow: hidden;
 
 }
+.cardProduct a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+
+}
 
 /*Con estos estios logramos el efecto de deslizamiento para ver ambas imagenes*/
 .divImg:hover .front{
