@@ -236,3 +236,47 @@ window.addEventListener('load',cleanFilters)
 window.addEventListener('load',postProducts)
 
 
+let email = document.querySelectorAll(".emaili")
+let pass = document.querySelector("#password")
+let sign = document.querySelector("#singin")
+let mess = document.querySelector("#mess")
+let mess2 = document.querySelector("#mess2")
+let mess3 = document.querySelector("#mess3")
+let subscribir = document.querySelector("#button-addon2")
+
+
+let decimalP =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/
+let decimalE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+function password(){
+    if(pass.value.match(decimalP)){
+        mess.innerHTML = ""
+    }else{
+        mess.innerHTML = "<span style = 'color: red;'>8-15 dígitos, una mayúscula, un número y un caracter especial</span>"
+    }
+   
+}
+
+function ema(){
+    if(email[0].value.match(decimalE)){
+        mess2.innerHTML = ""
+    }else{
+        mess2.innerHTML = "<span style = 'color: red;'>Introduzca un email válido</span>"
+    }
+  
+}
+function ema2(){
+    if(email[1].value.match(decimalE)){
+        mess3.innerHTML = ""
+    }else{
+        mess3.innerHTML = "<span style = 'color: red; font-size: 1rem'>Introduzca un email válido</span>"
+    }
+   
+}
+
+sign.addEventListener("click", ema)
+sign.addEventListener("click", password)
+subscribir.addEventListener("click", ema2)
+
+let catCom=document.querySelector('.dropbrand1')
+catCom.addEventListener('click',limpiarFiltros)
