@@ -1,10 +1,26 @@
 
-.colorNav{
-    background-color: #393E46;
+.negritas{
+
+    font-weight: bold;
+
+}
+
+#login{
+    background-color: #393e46;
+    border-style: none;
+    color: #ffffff;
+  }
+
+#navy{
+    background-color: #393e46;
+    margin: 0;
+
+    padding:0;
+    max-width: 100%;
 }
 
 .fondoPrincipal{
-
+    font-family: Raleway;
     background-color: #eeeeee;
 
 }
@@ -16,6 +32,7 @@
 .articulos{
 
     background-color: #ffffff;
+    border-style: none;
 
 }
 
@@ -37,6 +54,10 @@
 
 }
 
+.negritas{
+    font-weight: bold;
+}
+
 .textoArticulos{
 
     font-weight: bold;
@@ -48,6 +69,13 @@
     align-self: center;
 }
 
+<<<<<<< HEAD:Carrito/clases.css
+.botonImg{
+
+    border-style: none;
+
+=======
 botonArticulos{
     
+>>>>>>> 8c6d0ba67897416d5bc4464f3f78f719e6176063:Carrito/clases/clases.css
 }
