@@ -5,8 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact Us</title>
+ <!-- prueba si no lo borro -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
 
+
+<!-- estilo contacto -->
     <link rel="stylesheet" href="./contactUs.css">
+    <link rel="stylesheet" href="./Assets/MDB-Free_4.20.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Assets/MDB-Free_4.20.0/css/mdb.min.css">
+    <link rel="stylesheet" href="./Assets/MDB-Free_4.20.0/css/style.css">
+
+
 
     <!-- fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,28 +59,28 @@
                     <!-- Esto que le voy a poner abajo es el dropdown -->
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="" class="dropdown-item">urbaNOT</a>
+                            <a href="../Catalogo/Pages/catalogo.html" class="dropdown-item" id="ub_B">urbaNOT</a>
                         </li>
                         <li>
-                            <a href="" class="dropdown-item">Javucci</a>
+                            <a href="../Catalogo/Pages/catalogo.html" class="dropdown-item" id="jc_B">Javucci</a>
                         </li>
                         <li>
-                            <a href="" class="dropdown-item">JSpenny</a>
+                            <a href="../Catalogo/Pages/catalogo.html" class="dropdown-item" id="js_B">JSpenny</a>
                         </li>
                         <li>
                             <hr class="text-black-50">
                         </li>
                         <li>
-                            <a href="" class="dropdown-item">Catálogo completo</a>
+                            <a href="../Catalogo/Pages/catalogo.html" class="dropdown-item">Catálogo completo</a>
                         </li>
                     </ul>
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link navi">Sobre nosotros</a>
+                    <a href="../Contacto_About-us/aboutUs.html" class="nav-link navi">Sobre nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link navi">Contacto</a>
+                    <a href="../Contacto_About-us/contactUs.html" class="nav-link navi">Contacto</a>
                 </li>
             </ul>
 
@@ -164,6 +174,12 @@
 <!-- ******************************************************************************** -->
 
 
+<!-- ******************************************************************************** -->
+
+<!-- ******************************************************************************** -->
+
+
+
     <div class = "fondo">
 
 
@@ -172,7 +188,7 @@
 
 
         <div class = "imagen-con-texto"> <!-- aqui va todo el area de la imagen -->
-            <img class= "banner" src="./Imgs/pexels-telefononegro-1920-1280.jpg" alt="" width="1920px" height="1080px">
+            <img class= "banner" src="./Imgs/telefonos-recortados2.jpg" alt="" width="1920px" height="1080px">
             <div class="htmls">
                 <h1>Queremos saber de ti!</h1>
             </div>
@@ -191,9 +207,9 @@
 <section class="mb-4">
 
     <!--Section heading-->
-    <h2 class="h1-responsive font-weight-bold text-center my-4">Contáctanos!</h2>
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contáctanos</h2>
     <!--Section description-->
-    <p class="text-center w-responsive mx-auto mb-5">Te quedó alguna pregunta? No dudes en ponerte en contacto! Queremos escucharte.</p>
+    <p class="text-center w-responsive mx-auto mb-5">No encontraste lo que necesitabas? Escríbenos un correo! Te responderemos lo antes posible.</p>
 
     <div class="row">
 
@@ -254,7 +270,7 @@
             </form>
 
             <div class="text-center text-md-left">
-                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                <a class="btn btn-primary" onclick="validateForm();">Enviar</a>
             </div>
             <div class="status"></div>
         </div>
@@ -264,7 +280,7 @@
         <div class="col-md-3 text-center">
             <ul class="list-unstyled mb-0">
                 <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                    <p>Monterrey, NL, Mexico</p>
+                    <p>Monterrey, NL, México</p>
                 </li>
 
                 <li><i class="fas fa-phone mt-4 fa-2x"></i>
@@ -272,7 +288,7 @@
                 </li>
 
                 <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                    <p>contacto@ht&ml.com</p>
+                    <p>contact@html.com</p>
                 </li>
             </ul>
         </div>
@@ -284,11 +300,102 @@
 <!--Section: Contact v.2-->
 
 
+<!-- **********************************Links bootstrap JS para estilo********************************************** -->
+
+<script type="text/javascript" src="./Assets/MDB-Free_4.20.0/js/jquery.min.js"></script>
+<script type="text/javascript" src="./Assets/MDB-Free_4.20.0/js/popper.min.js"></script>
+<script type="text/javascript" src="./Assets/MDB-Free_4.20.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./Assets/MDB-Free_4.20.0/js/mdb.min.js"></script>
+
+
 <!-- **********************************BOOTSTRAP CONTACTO********************************************** -->
 
     </div>
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
     crossorigin="anonymous"></script>
+ 
+ <!-- FOOTER----------------------------- -->
+ <div id="footer" style="height: 200px;">
+    <footer style="color: #393e46; margin-top: 2%;">
+        <div class="container text-start">
+            <div class="row justify-content-center" id="foot">
+               <!---<div class="col text-start">
+
+                     <ul style="list-style-type: none; text-align: left; list-style: none; padding-left: 0;">
+                        <span style="font-weight: bold;">Ayudas & Apoyo</span> <br><br>
+                        <div style="font-size: 0.8rem;">
+                            <li>Información de envío</li>
+                            <li>Devolución</li>
+                            <li>Cómo realizar el pedido</li>
+                            <li>Rastrear el pedido</li>
+                            <li>Guía de tallas</li>
+                            <li>FAQ</li>
+                            </di>
+                    </ul> -->
+
+                <!--</div> -->
+                <div class="col-6 text-center">
+
+                    <ul style="list-style-type: none; text-align: left; list-style: none; padding-left: 0;">
+                        <span style="font-weight: bold; font-size: 1.3rem;">Información</span> <br><br>
+                        <div style="font-size: 1rem;">
+                            <a href = "../Contacto_About-us/aboutUs.html" style="text-decoration: none;color: inherit"><li>Sobre nosotros</li><a >
+                            <a href="../Contacto_About-us/contactUs.html" style="text-decoration: none;color: inherit"><li>Contacto</li></a>
+                            <a href="../Formulario/index.html" style="text-decoration: none;color: inherit"><li>Regístrate</li></a>
+                            <a href="../FAQ/index copy.html" style="text-decoration: none;color: inherit"><li>FAQ's</li></a>
+                            </di>
+                    </ul>
+
+                </div>
+                <!-- <div class="col-3">
+
+                     <ul style="list-style-type: none; text-align: left; list-style: none; padding-left: 0;">
+                        <span style="font-weight: bold;">Únete a nuestras marcas</span> <br><br>
+                        <div style="font-size: 0.8rem;">
+                            <li>Información de envío</li>
+                            <li>Devolución</li>
+                            <li>Cómo realizar el pedido</li>
+                            <li>Rastrear el pedido</li>
+                            <li>Guía de tallas</li>
+                            <li>FAQ</li>
+                            </di>
+                    </ul> 
+
+                </div> -->
+                <div class="col-6" style="width: 40%;">
+                    <span style="font-weight: bold;">Nuestras redes</span><br>
+                    <div class="row" style="display: inline-block; font-size: 1.3rem;">
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-facebook"></i>
+                        </di>
+                        <br><br>
+                        <div class="input-group mb-3" style="width: 450px;" id="subs">
+                            <input type="text" class="form-control emaili" placeholder="Recibe noticias de nuestros productos"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                                <!-- aqui esta el pinche puto perro error del boton que no se ve como el normal. Si pongo espacio entre btn y btn-outline -->
+                            <button class="btnbtn-outline-secondary" type="button" id="button-addon2"
+                                style="color: white; background-color: #393e46;">Subscribir</button><br><br>
+                            
+                        </div>
+                        <div id="mess3"></div>
+                        <!-- <div class="row container" style="display: inline-block;">
+                            <input type="text" placeholder="Recibe noticias de nuestros productos" size="20" style="display: block;">
+                            <button style="float: right;">asdas</button> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <small style="margin-left: 2%;">Copyright 2023</small>
+
+    </footer>
+</div>
+<!-- FOOTER ------------------------------------------------------------------------------------------------- -->
+
+    <!-- validacion -->
+    <script src="./validacion-contactUs.js"></script>
 </body>
 </html>
