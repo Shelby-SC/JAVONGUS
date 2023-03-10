@@ -83,7 +83,7 @@ const filtrar=()=>{
 //Funcion para iterar sobre el archivo JSON y llenar el DOM acorde a la base de datos
 const postProducts=()=>{
     //setTimeout para esperar el resultado de fetc fetch
-    setTimeout(() => {
+    
         if(localStorage.getItem('marca')!=null){
             let check=document.getElementById(localStorage.getItem('marca'))
             if(check!=null){check.checked=true}
@@ -91,7 +91,7 @@ const postProducts=()=>{
         //Loop para iterar en cada uno de los elementos disponibles
         writeWithFilters()
         localStorage.removeItem('marca')
-    }, 1000); 
+ 
 }
 
 let x=(document.querySelector(".dropbrand").getAttribute('val'))
@@ -233,7 +233,11 @@ rangeMax.addEventListener("change",filtrar)
 //Aqui se agregan funciones a la ventana para que al recargar, se limpien los filtros 
 //y se carguen de nuevo todos los articulos
 window.addEventListener('load',cleanFilters)
-window.addEventListener('load',postProducts)
+window.addEventListener('load',()=>{
+    setTimeout(() => {
+        postProducts()
+    }, 700);
+})
 
 
 let email = document.querySelectorAll(".emaili")
