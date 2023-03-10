@@ -1,10 +1,12 @@
 
+
+
 .colorNav{
     background-color: #393E46;
 }
 
 .fondoPrincipal{
-
+    font-family: Raleway;
     background-color: #eeeeee;
 
 }
@@ -35,6 +37,10 @@
     max-width: 250px;
     float: inline-start;
 
+}
+
+.negritas{
+    font-weight: bold;
 }
 
 .textoArticulos{
