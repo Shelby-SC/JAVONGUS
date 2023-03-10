@@ -4,7 +4,7 @@
     padding: 0;
     margin:0;
     width: 100%;
-    background-color: #ff4d49;
+    background-color: #393E46;
 }
 
 #logo{
@@ -16,7 +16,7 @@
 
 
 #index_nav{
-    background-color: #ff4d49;
+    background-color: #393E46;
     color: #ffffff;
     
 }
@@ -40,11 +40,11 @@ img{
 }
 
 #bod{
-    background-color: #ff4d49;
+    background-color: #393E46;
 }
 
 #navy{
-    background-color: #ff4d49;
+    background-color: #393E46;
     margin: 0;
     
     padding:0;
@@ -104,7 +104,7 @@ Esta madre de la query lo voy a hacer en JS
   }
 
   #login{
-    background-color: #FF4D48;
+    background-color: #393E46;
     border-style: none;
     color: #ffffff;
   }
