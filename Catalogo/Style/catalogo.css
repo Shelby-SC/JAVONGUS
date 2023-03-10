@@ -26,7 +26,7 @@
 }
 
 #index_nav{
-    background-color: #ff4d49;
+    background-color: #393e46;
     color: #ffffff;
     
 }
@@ -41,6 +41,7 @@
     margin: 0;
     padding:0;
     max-width: 100%;
+    background-color: #393e46;
 }
 #logo_2{
     height: 40px;
@@ -49,6 +50,13 @@
 .dropbrand {
     background-color: #393e46;
     color: #ffffff;
+}
+.dropbrand1{
+    background-color: #393e46;
+    color: #ffffff;
+}
+#login{
+    background-color: #393e46;
 }
 /*Terminan estilos para el navBar*/
 
