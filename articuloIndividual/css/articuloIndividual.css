@@ -1,3 +1,7 @@
+body{
+    font-family: raleway;
+}
+
 h1{
     font-size: 2.5rem;
     font-weight: 700;
@@ -25,6 +29,85 @@ h6{
     margin: 0px;
 }
 
+/* boton colapso */
+
+
+button.btn {
+    background-color: white;
+    color: black;
+    text-align: left;
+    padding: 15px;
+  }
+  
+  button.btn:hover {
+    background-color: #E5E0FF;
+    color: #7286D3;
+  }
+  
+  a.btn {
+    border-color: white;
+    border-width: .1rem;
+    color: white;
+  }
+  
+  a.btn:hover {
+    background-color: #E5E0FF;
+    color: #7286D3;
+  }
+
+/* termina colapso */
+
+/* tabla */
+
+.tallas {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .tallas-header {
+    background-color: rgba(236, 233, 233, 0.266);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px #dfdada;
+  }
+  
+  .tallas-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .tallas-toggle span {
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  
+  .tallas-table {
+    width: 100%;
+    border-collapse: collapse;
+    display: none;
+  }
+  
+  .tallas-table th,
+  .tallas-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .tallas-table th {
+    background-color: #f1f1f1;
+  }
+  
+  .toggle-button {
+    margin-right: 20px;
+    
+  }
+  
+  
 
 .accordion-header, .accordion-collapse {
     background-color: transparent !important;
@@ -44,8 +127,8 @@ h6{
     font-size: 1.2rem;
 }
 .color{
-    width: 28px;
-    height: 28px;
+    width: 23px;
+    height: 23px;
     background: none;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -54,11 +137,11 @@ h6{
     -o-border-radius: 50%;
     margin-right: 12px;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: all 0.1s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
+    -o-transition: all 0.s ease;
 }
 .color-black{
     background-color: #242424;
@@ -76,15 +159,25 @@ h6{
     background-color: #ededed;
 }
 .color:hover{
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
 }
-.active-color{
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+
+.active-color{ 
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out
 }
+  
 .color-groups{
     padding: 1rem 0;
     display: flex;
 }
+
+
 
 
 /* Botones */
@@ -93,7 +186,7 @@ button{
     font-weight: 700;
     outline: none;
     border: none;
-    background-color: black;
+    background-color: #7E93DC;
     color: white;
     padding: 13px 30px;
     cursor:pointer;
@@ -103,14 +196,10 @@ button{
 }
 
 button:hover{
-    background-color: grey;
+    background-color: #7E93DC;
 }
 
-hr {
-    width: 400px;
-    height: 2px;
-    background-color: rgb(0, 42, 255);
-} 
+
 
 /* formato estrellas */
 .star {
@@ -156,7 +245,7 @@ hr {
     /* Ocultar boton */
 
 .product .buy-btn{
-    background: orange;
+    background: #393E46;
     transform: translateY(20px);
     opacity: 0;
     transition: 0.3s all;
@@ -170,7 +259,7 @@ hr {
 }
 
 
-/* navbar */
+/*! navbar */
 
 
 #page{
@@ -179,7 +268,7 @@ hr {
     padding: 0;
     margin:0;
     width: 100%;
-    background-color: #ff4d49;
+    background-color: #393e46;
 }
 
 #logo{
@@ -191,7 +280,7 @@ hr {
 
 
 #index_nav{
-    background-color: #ff4d49;
+    background-color: #393e46;
     color: #ffffff;
     
 }
@@ -209,13 +298,12 @@ hr {
 
 
 
-
 #bod{
-    background-color: #ff4d49;
+    background-color: #393e46;
 }
 
 #navy{
-    background-color: #ff4d49;
+    background-color: #393e46;
     margin: 0;
     
     padding:0;
@@ -282,7 +370,7 @@ html, body, #wrapper {
   }
 
   #login{
-    background-color: #FF4D48;
+    background-color: #393e46;
     border-style: none;
     color: #ffffff;
   }
