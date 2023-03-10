@@ -278,5 +278,34 @@ sign.addEventListener("click", ema)
 sign.addEventListener("click", password)
 subscribir.addEventListener("click", ema2)
 
+
 let catCom=document.querySelector('.dropbrand1')
 catCom.addEventListener('click',limpiarFiltros)
+
+
+function getWidth() {
+    return Math.max(
+      document.body.scrollWidth,
+      document.documentElement.scrollWidth,
+      document.body.offsetWidth,
+      document.documentElement.offsetWidth,
+      document.documentElement.clientWidth
+    );
+  }
+
+
+function media(){
+    if(getWidth()<1300){
+        // Cambia tanto como la imagen, como la posición del botón de ver más, como la imagen del modular
+
+        footer.classList.remove("row")
+        footer.classList.add("flex-row")
+    }else{
+        // Regresa todo a como está originalmente
+        footer.classList.remove("flex-row")
+        footer.classList.add("row")
+    }
+}
+setInterval(media,1)
+
+let footer = document.querySelector("#foot")
