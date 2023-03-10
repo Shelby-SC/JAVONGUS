@@ -57,7 +57,19 @@ const buildCard=item=>{
 }
 
 
+const agregarFiltro=(event)=>{
+    localStorage.setItem("marca",(event.target.getAttribute('value')))
+    cleanFilters()
+    del()
+    postProducts()
+}
 
+
+let drops=document.querySelectorAll('.dropbrand')
+for(item of drops){
+    
+    item.addEventListener('click', agregarFiltro)
+}
 
 
 const filtrar=()=>{
@@ -66,19 +78,20 @@ const filtrar=()=>{
 }
 
 //Funcion para iterar sobre el archivo JSON y llenar el DOM acorde a la base de datos
-
 const postProducts=()=>{
     //setTimeout para esperar el resultado de fetc fetch
     setTimeout(() => {
-        //Loop para iterar en cada uno de los elementos disponibles
-        for(item of jsonData){
-            buildCard(item)
+        if(localStorage.getItem('marca')!=null){
+            let check=document.getElementById(localStorage.getItem('marca'))
+            if(check!=null){check.checked=true}
         }
+        //Loop para iterar en cada uno de los elementos disponibles
+        writeWithFilters()
+        localStorage.removeItem('marca')
     }, 1000); 
 }
 
-
-
+let x=(document.querySelector(".dropbrand").getAttribute('val'))
 //Funcion que se agrega a los circulos para cambiar de color
 const changeColor=(nodo,srcFront,srcBack)=>{
     let containImg=document.getElementById(nodo)
@@ -184,7 +197,7 @@ botonClean.addEventListener('click', limpiarFiltros)
 const filter=(clas,target)=>{
     let selected=[]
     let checks=document.querySelectorAll(clas)
-    console.clear()
+    //console.clear()
     for(let i=0;i<checks.length;i++){
         if(checks[i].checked){
             selected.push(checks[i].value)
@@ -216,6 +229,7 @@ rangeMax.addEventListener("change",filtrar)
 
 //Aqui se agregan funciones a la ventana para que al recargar, se limpien los filtros 
 //y se carguen de nuevo todos los articulos
-window.addEventListener('load',postProducts)
 window.addEventListener('load',cleanFilters)
+window.addEventListener('load',postProducts)
+
 

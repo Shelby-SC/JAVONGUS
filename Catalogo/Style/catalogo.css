@@ -1,4 +1,9 @@
-*{user-select: none;}
+
+
+*{user-select: none;} 
+*::-webkit-scrollbar{ 
+    width: 2px;
+}
 /*Estilos para el navBar*/
 #page{
     font-family: Raleway;
@@ -41,6 +46,10 @@
     height: 40px;
     margin-top: 5px;
 }
+.dropbrand {
+    background-color: #393e46;
+    color: #ffffff;
+}
 /*Terminan estilos para el navBar*/
 
 
@@ -57,7 +66,10 @@
 }
 /*Estilos para que todas las imagenes esten del mismo tamaño*/
 img{
+    min-height: 399px;
     max-width: 300px; 
+    min-width: 300px;
+   
     transition: all 1s;
     border-radius: 20px;
     border:solid 2px #000;
@@ -83,7 +95,7 @@ img{
     transform: translateY(-400px);
 }
 .divImg:hover .back{
-    transform: translateY(-400px);
+    transform: translateY(-399px);
 }
 .cardProduct>div:nth-child(2n){
     display: flex;

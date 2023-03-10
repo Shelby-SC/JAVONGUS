@@ -21,7 +21,7 @@
 	position: relative;
 	display: inline-block;
 	width: 40px;
-	height: 21px;
+	height: 19px;
 	border: 2px solid #7286d3;
 	border-radius: 30px;
 	cursor: pointer;
@@ -38,6 +38,7 @@
 	display: inline-block;
 	width: 15px;
 	height: 15px;
+    margin-bottom: .5px;
 	background-color: #7286d3;
 	border-radius: 50%;
 	transition: transform 0.5s cubic-bezier(0.52, -0.4, 0.27, 1.55);
