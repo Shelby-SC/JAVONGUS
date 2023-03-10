@@ -156,7 +156,7 @@ Esta madre de la query lo voy a hacer en JS
 /* ********************************************************************************************************************************************** */
 
 
-.banner {
+.ganchos {
     /* display: block;  */
     max-width: 100%;
     background-size: cover;
@@ -168,19 +168,17 @@ Esta madre de la query lo voy a hacer en JS
 p {
     font-size: 18px;
     font-family: raleway;
-    text-align: center;
 }
 
-body {
+/* body {
     background-color: #EEEEEE;
-    font-family: raleway;
-} 
+} */
 
 .imagen-con-texto
 {
 position: relative;
 text-align: center;
-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
 }
 
 .htmls {
