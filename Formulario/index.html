@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
   <title>Formulario de registro</title>
@@ -18,7 +19,7 @@
   <!-- todo lo que va después de navbar-expand-md que es donde se hace resposiva -->
   <!-- es cosas de estilo -->
   <div class="container-fluid">
-      <a class = "navbar-brand ms-3" href="#">
+      <a class = "navbar-brand ms-3" href="../index_TEST/index.html">
           <span id="logo">ht&ml</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
@@ -87,7 +88,7 @@
 
 
 <!-- ************************** INICIO FORMULARIO ****************************** -->
-  <form action="" class="form" style="background-image: url(/imags/ht&ml-fondo.png);" id="contact-form">
+  <form action="" class="form" style="background-image: url(../Formulario/imags/ht&ml-fondo.png);" id="contact-form">
 
     <div class="container">
     
@@ -140,13 +141,16 @@
               <br>
 
 
-            <div class="row py-2">
-                <a class="btn" href="">Iniciar sesión con Facebook</a>
-              </div>  <!--Cierre facebook -->
+           
+              <div class="row py-2">
+                  <a class="btn" href="" style="background-color: #393e46;">Iniciar sesión con Facebook</a>
+                </div>  <!--Cierre facebook -->
+  
+                <div class="row">
+                    <a class="btn" href="" role="button" style="background-color: #393e46;">Iniciar sesión con Google</a>
+                </div> <!-- Cierre google-->
 
-              <div class="row">
-                  <a class="btn" href="" role="button">Iniciar sesión con Google</a>
-              </div> <!-- Cierre google-->
+             
 
             </div> 
 
@@ -159,82 +163,89 @@
   <script src="./validacion.js"></script>
 </body>
 
+<!-- ------------------------------------------------------------------------------------------- -->
 <div id="footer" style="height: 200px;">
-  <footer style="color: #393e46; margin-top: 1%;">
-    <div class="container text-start">
-      <div class="row">
-        <div class="col text-start">
+  <footer style="color: #393e46; margin-top: 2%;">
+      <div class="container text-start">
+          <div class="row" id="foot">
+              <div class="col text-start">
 
-          <ul style="list-style-type: none; text-align: left; list-style: none; padding-left: 0;">
-            <span style="font-weight: bold;">Ayudas & Apoyo</span> <br><br>
-            <div style="font-size: 0.8rem;">
-              <li>Información de envío</li>
-              <li>Devolución</li>
-              <li>Cómo realizar el pedido</li>
-              <li>Rastrear el pedido</li>
-              <li>Guía de tallas</li>
-              <li>FAQ</li>
-              </di>
-          </ul>
+                  <!-- <ul style="list-style-type: none; text-align: left; list-style: none; padding-left: 0;">
+                      <span style="font-weight: bold;">Ayudas & Apoyo</span> <br><br>
+                      <div style="font-size: 0.8rem;">
+                          <li>Información de envío</li>
+                          <li>Devolución</li>
+                          <li>Cómo realizar el pedido</li>
+                          <li>Rastrear el pedido</li>
+                          <li>Guía de tallas</li>
+                          <li>FAQ</li>
+                          </di>
+                  </ul> -->
 
-        </div>
-        <div class="col text-start">
+              </div> 
+              <div class="col-6 text-center">
 
-          <ul style="list-style-type: none; text-align: left; list-style: none; padding-left: 0;">
-            <span style="font-weight: bold;">Servicio al Cliente</span> <br><br>
-            <div style="font-size: 0.8rem;">
-              <li>Información de envío</li>
-              <li>Devolución</li>
-              <li>Cómo realizar el pedido</li>
-              <li>Rastrear el pedido</li>
-              <li>Guía de tallas</li>
-              <li>FAQ</li>
-              </di>
-          </ul>
+                  <ul style="list-style-type: none; text-align: left; list-style: none; padding-left: 0;">
+                      <span style="font-weight: bold; font-size: 1.3rem;">Información</span> <br><br>
+                      <div style="font-size: 1rem;">
+                          <a href = "../Contacto_About-us/aboutUs.html" style="text-decoration: none;color: inherit"><li>Sobre nosotros</li><a >
+                          <a href="../Contacto_About-us/contactUs.html" style="text-decoration: none;color: inherit"><li>Contacto</li></a>
+                          <a href="../Formulario/index.html" style="text-decoration: none;color: inherit"><li>Regístrate</li></a>
+                          <a href="../FAQ/index copy.html" style="text-decoration: none;color: inherit"><li>FAQ's</li></a>
+                          </di>
+                  </ul>
 
-        </div>
-        <div class="col-3">
+              </div>
+              <!-- <div class="col-3">
 
-          <ul style="list-style-type: none; text-align: left; list-style: none; padding-left: 0;">
-            <span style="font-weight: bold;">Únete a nuestras marcas</span> <br><br>
-            <div style="font-size: 0.8rem;">
-              <li>Información de envío</li>
-              <li>Devolución</li>
-              <li>Cómo realizar el pedido</li>
-              <li>Rastrear el pedido</li>
-              <li>Guía de tallas</li>
-              <li>FAQ</li>
-              </di>
-          </ul>
+                   <ul style="list-style-type: none; text-align: left; list-style: none; padding-left: 0;">
+                      <span style="font-weight: bold;">Únete a nuestras marcas</span> <br><br>
+                      <div style="font-size: 0.8rem;">
+                          <li>Información de envío</li>
+                          <li>Devolución</li>
+                          <li>Cómo realizar el pedido</li>
+                          <li>Rastrear el pedido</li>
+                          <li>Guía de tallas</li>
+                          <li>FAQ</li>
+                          </di>
+                  </ul> 
 
-        </div>
-        <div class="col-6" style="width: 40%;">
-          <span style="font-weight: bold;">Nuestras redes</span><br>
-          <div class="row" style="display: inline-block; font-size: 1.3rem;">
-            <i class="bi bi-twitter"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-facebook"></i>
-            </di>
-            <br><br>
-            <div class="input-group mb-3" style="width: 500px;">
-              <input type="text" class="form-control" placeholder="Recibe noticias de nuestros productos"
-                aria-label="Recipient's username" aria-describedby="basic-addon2">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2"
-                style="color: white; background-color: #393e46;">Subscribir</button>
-            </div>
-         
+              </div> -->
+              <div class="col-6" style="width: 40%;">
+                  <span style="font-weight: bold;">Nuestras redes</span><br>
+                  <div class="row" style="display: inline-block; font-size: 1.3rem;">
+                      <i class="bi bi-twitter"></i>
+                      <i class="bi bi-instagram"></i>
+                      <i class="bi bi-facebook"></i>
+                      </di>
+                      <br><br>
+                      <div class="input-group mb-3" style="width: 450px;" id="subs">
+                          <input type="text" class="form-control emaili" placeholder="Recibe noticias de nuestros productos"
+                              aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                          <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                              style="color: white; background-color: #393e46;">Subscribir</button><br><br>
+                          
+                      </div>
+                      <div id="mess3"></div>
+                      <!-- <div class="row container" style="display: inline-block;">
+                          <input type="text" placeholder="Recibe noticias de nuestros productos" size="20" style="display: block;">
+                          <button style="float: right;">asdas</button> -->
+                  </div>
+
+              </div>
           </div>
-
-        </div>
       </div>
-    </div>
-
+      <br>
+      <small style="margin-left: 2%;">Copyright 2023</small>
 
   </footer>
 </div>
+<!-- ---------------------------------------------------------------------------------------------------- -->
 
 
 
 
 
 </html>
+
+<!-- SE HIZO -->
