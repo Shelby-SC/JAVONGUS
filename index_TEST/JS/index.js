@@ -155,6 +155,7 @@ $('html, body').css({
 
 let subs = document.querySelector("#subs")
 let ht = document.querySelector("#ht")
+let footer = document.querySelector("#foot")
 
 // RESPONSIVE
 // Esta función cambia de imagen si el ancho de la ventana es menos de 1300px
@@ -163,36 +164,48 @@ function media(){
         case 0:
             if(getWidth()<1300){
                 // Cambia tanto como la imagen, como la posición del botón de ver más, como la imagen del modular
-                img_urb.src = "/imgs/urba6.png"
+                img_urb.src = "./imgs/urba6.png"
                 btMore.style.left = "40%"
-                ht.src = "/imgs/html3.png"
+                ht.src = "./imgs/html3.png"
+                footer.classList.remove("row")
+                footer.classList.add("flex-row")
             }else{
                 // Regresa todo a como está originalmente
-                img_urb.src = "/imgs/urba4.png"
+                img_urb.src = "./imgs/urba4.png"
                 btMore.style.left = "47%"
-                ht.src = "/imgs/html2.png"
+                ht.src = "./imgs/html2.png"
+                footer.classList.remove("flex-row")
+                footer.classList.add("row")
             }
             break;
         case 1:
             if(getWidth()<1300){
-                img_jav.src = "/imgs/javucci4.png"
+                img_jav.src = "./imgs/javucci4.png"
                 btMore.style.left = "40%"
-                ht.src = "/imgs/html3.png"
+                ht.src = "./imgs/html3.png"
+                footer.classList.remove("row")
+                footer.classList.add("flex-row")
             }else{
-                img_jav.src = "/imgs/javucci.png"
+                img_jav.src = "./imgs/javucci.png"
                 btMore.style.left = "47%"
-                ht.src = "/imgs/html2.png"
+                ht.src = "./imgs/html2.png"
+                footer.classList.remove("flex-row")
+                footer.classList.add("row")
             }
             break;
         case 2:
             if(getWidth()<1300){
-                img_js.src = "/imgs/jspenny2.png"
+                img_js.src = "./imgs/jspenny2.png"
                 btMore.style.left = "40%"
-                ht.src = "/imgs/html3.png"
+                ht.src = "./imgs/html3.png"
+                footer.classList.remove("row")
+                footer.classList.add("flex-row")
             }else{
-                img_js.src = "/imgs/jspenny.png"
+                img_js.src = "./imgs/jspenny.png"
                 btMore.style.left = "47%"
-                ht.src = "/imgs/html2.png"
+                ht.src = "./imgs/html2.png"
+                footer.classList.remove("flex-row")
+                footer.classList.add("row")
             }
             break;
         }
@@ -211,4 +224,58 @@ function mediaSbs(){
 setInterval(media,1)
 setInterval(mediaSbs, 1)
 
+let email = document.querySelectorAll(".emaili")
+let pass = document.querySelector("#password")
+let sign = document.querySelector("#singin")
+let mess = document.querySelector("#mess")
+let mess2 = document.querySelector("#mess2")
+let mess3 = document.querySelector("#mess3")
+let subscribir = document.querySelector("#button-addon2")
 
+
+let decimalP =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/
+let decimalE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+function password(){
+    if(pass.value.match(decimalP)){
+        mess.innerHTML = ""
+    }else{
+        mess.innerHTML = "<span style = 'color: red;'>8-15 dígitos, una mayúscula, un número y un caracter especial</span>"
+    }
+    console.log(pass.value);
+}
+
+function ema(){
+    if(email[0].value.match(decimalE)){
+        mess2.innerHTML = ""
+    }else{
+        mess2.innerHTML = "<span style = 'color: red;'>Introduzca un email válido</span>"
+    }
+    console.log(pass.value);
+}
+function ema2(){
+    if(email[1].value.match(decimalE)){
+        mess3.innerHTML = ""
+    }else{
+        mess3.innerHTML = "<span style = 'color: red; font-size: 1rem'>Introduzca un email válido</span>"
+    }
+    console.log(pass.value);
+}
+
+sign.addEventListener("click", ema)
+sign.addEventListener("click", password)
+subscribir.addEventListener("click", ema2)
+
+const agregarFiltro=(y)=>{
+    
+    localStorage.setItem("marca",y)
+}
+
+
+document.querySelector("#ub_A").addEventListener("click", ()=>{agregarFiltro("urbanot")})
+document.querySelector("#jc_A").addEventListener("click", ()=>{agregarFiltro("javucci")})
+document.querySelector("#js_A").addEventListener("click", ()=>{agregarFiltro("jspenny")})
+
+document.querySelector("#ub_B").addEventListener("click", ()=>{agregarFiltro("urbanot")})
+document.querySelector("#jc_B").addEventListener("click", ()=>{agregarFiltro("javucci")})
+document.querySelector("#js_B").addEventListener("click", ()=>{agregarFiltro("jspenny")})

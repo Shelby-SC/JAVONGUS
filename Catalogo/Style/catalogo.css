@@ -1,4 +1,9 @@
-*{user-select: none;}
+
+
+*{user-select: none;} 
+*::-webkit-scrollbar{ 
+    width: 2px;
+}
 /*Estilos para el navBar*/
 #page{
     font-family: Raleway;
@@ -21,7 +26,7 @@
 }
 
 #index_nav{
-    background-color: #ff4d49;
+    background-color: #393e46;
     color: #ffffff;
     
 }
@@ -36,10 +41,22 @@
     margin: 0;
     padding:0;
     max-width: 100%;
+    background-color: #393e46;
 }
 #logo_2{
     height: 40px;
     margin-top: 5px;
+}
+.dropbrand {
+    background-color: #393e46;
+    color: #ffffff;
+}
+.dropbrand1{
+    background-color: #393e46;
+    color: #ffffff;
+}
+#login{
+    background-color: #393e46;
 }
 /*Terminan estilos para el navBar*/
 
@@ -57,7 +74,10 @@
 }
 /*Estilos para que todas las imagenes esten del mismo tamaño*/
 img{
+    min-height: 399px;
     max-width: 300px; 
+    min-width: 300px;
+   
     transition: all 1s;
     border-radius: 20px;
     border:solid 2px #000;
@@ -77,13 +97,19 @@ img{
     overflow: hidden;
 
 }
+.cardProduct a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+
+}
 
 /*Con estos estios logramos el efecto de deslizamiento para ver ambas imagenes*/
 .divImg:hover .front{
     transform: translateY(-400px);
 }
 .divImg:hover .back{
-    transform: translateY(-400px);
+    transform: translateY(-399px);
 }
 .cardProduct>div:nth-child(2n){
     display: flex;

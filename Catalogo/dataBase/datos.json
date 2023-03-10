@@ -7,6 +7,7 @@
         "descripcion": "Camisa Poker bi color",
         "codigo": "12938",
         "category": "camisas hombre UrbaNOT top",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/pokerBeigefront.webp",
@@ -28,11 +29,38 @@
         "descripcion": "Camisa estampado negro",
         "codigo": 12923,
         "category": "camisas hombre UrbaNOT top",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/estampBlackFront.webp",
                 "back": "../dataBase/estampBlackBack.webp",
                 "hexa": "#000"
+            }
+        }
+    },
+    {
+        "id":"camisa lisa",
+        "title":"Camisa lisa Urban",
+        "marca":"UrbaNOT",
+        "price":289.00,
+        "descripcion":"Camisa lisa sin estampado",
+        "category":"camisas hombre UrbaNOT top",
+        "url":"/articuloIndividual/html/articuloIndividual.html",
+        "colors":{
+            "color1":{
+                "front":"../dataBase/camisaWhiteFront.png",
+                "back":"../dataBase/camisaWhiteBack.png",
+                "hexa":"#fff"
+            },
+            "color2":{
+                "front":"../dataBase/camisaBlackFront.png",
+                "back":"../dataBase/camisaBlackBack.png",
+                "hexa":"#000"
+            },
+            "color3":{
+                "front":"../dataBase/camisaBlueFront.png",
+                "back":"../dataBase/camisaBlueBack.png",
+                "hexa":"#039"
             }
         }
     },
@@ -44,21 +72,22 @@
         "descripcion": "Camisa floreada hombre",
         "codigo": "12922",
         "category": "camisas hombre UrbaNOT top",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/floresRedFront.webp",
                 "back": "../dataBase/floresRedBack.webp",
-                "hexa": "#9a1012"
+                "hexa": "linear-gradient(90deg, rgba(252,25,9,1) 0%, rgba(8,8,8,1) 100%)"
             },
             "color2": {
                 "front": "../dataBase/floresBlueFront.webp",
                 "back": "../dataBase/floresBlueBack.webp",
-                "hexa": "#12389A"
+                "hexa": "linear-gradient(90deg, rgba(0,31,255,1) 0%, rgba(8,8,8,1) 70%)"
             },
             "color3": {
                 "front": "../dataBase/floresWhiteFront.webp",
                 "back": "../dataBase/floresWhiteBack.webp",
-                "hexa": "#fff"
+                "hexa": " linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 70%)"
             }
         }
     },
@@ -70,6 +99,7 @@
         "descripcion": "Top estampado de colores",
         "codigo": "45234",
         "category": "mujer JSPenny top",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/topBlackFront.webp",
@@ -91,6 +121,7 @@
         "descripcion": "Jeans Mujer",
         "codigo": "45246",
         "category": "mujer JSPenny bottom",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/jeansBlueFront.webp",
@@ -112,16 +143,17 @@
         "descripcion": "Blusa a cuadros",
         "codigo": "45098",
         "category": "mujer JSPenny top ",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/blouseOrangeFront.webp",
                 "back": "../dataBase/blouseOrangeBack.webp",
-                "hexa": "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(247,113,2,1) 100%)"
+                "hexa": "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(247,113,2,1) 100%)"
             },
             "color2": {
                 "front": "../dataBase/blouseGreenFront.webp",
                 "back": "../dataBase/blouseGreenBack.webp",
-                "hexa": " radial-gradient(circle, rgba(13,32,45,1) 0%, rgba(36,193,0,1) 100%)"
+                "hexa": "linear-gradient(90deg, rgba(13,32,45,1) 0%, rgba(36,193,0,1) 100%)"
             }
         }
     },
@@ -133,6 +165,7 @@
         "descripcion": "Blusa a cuadros",
         "codigo": "45675",
         "category": "mujer JSPenny  top",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/blouseTopFront.webp",
@@ -148,6 +181,7 @@
         "descripcion": "Colar lalalalal",
         "codigo": "00923",
         "category": "mujer Javucci  hombre accesorios ",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/collarMoneyFront.webp",
@@ -164,6 +198,7 @@
         "descripcion": "Cap hapy lalala",
         "codigo": "00853",
         "category": "mujer Javucci hombre accesorios ",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/capHappyFront.webp",
@@ -180,6 +215,7 @@
         "descripcion": "Diademas perlas lalala",
         "codigo": "00472",
         "category": "mujer Javucci accesorios ",
+        "url":"#",
         "colors": {
             "color1": {
                 "front": "../dataBase/diademaPerlasFront.webp",

@@ -6,6 +6,8 @@ fetch('../dataBase/datos.json')
     jsonData = data;
 });
 
+
+
 //Funcion para la creacion de elementos, el cual recibe dos parametros, uno para el tipo 
 //de elemento que queremos crear, y otro para la clase que se le dara 
 const buildElement=(element, clas)=>{
@@ -21,13 +23,14 @@ const buildCard=item=>{
             let imgF=buildElement("img", ('card',"front"))
             let imgB=buildElement("img",('card', "back"))
             let divIm=buildElement('div','divImg')
-            let title=buildElement('h5')
+            let title=buildElement('a')
             let divTitle=buildElement('div')
             let description=buildElement('div',"description")
             let price=buildElement('p')
             let brand=buildElement('p')
             imgB.draggable=false
             imgF.draggable=false
+            title.href=item.url
             //Adicion de atributos y texto a los elementos
             price.innerHTML=`$${item.price}`
             brand.innerHTML=`Marca ${item.marca}`
@@ -57,7 +60,19 @@ const buildCard=item=>{
 }
 
 
+const agregarFiltro=(event)=>{
+    localStorage.setItem("marca",(event.target.getAttribute('value')))
+    cleanFilters()
+    del()
+    postProducts()
+}
 
+
+let drops=document.querySelectorAll('.dropbrand')
+for(item of drops){
+    
+    item.addEventListener('click', agregarFiltro)
+}
 
 
 const filtrar=()=>{
@@ -66,19 +81,20 @@ const filtrar=()=>{
 }
 
 //Funcion para iterar sobre el archivo JSON y llenar el DOM acorde a la base de datos
-
 const postProducts=()=>{
     //setTimeout para esperar el resultado de fetc fetch
     setTimeout(() => {
-        //Loop para iterar en cada uno de los elementos disponibles
-        for(item of jsonData){
-            buildCard(item)
+        if(localStorage.getItem('marca')!=null){
+            let check=document.getElementById(localStorage.getItem('marca'))
+            if(check!=null){check.checked=true}
         }
+        //Loop para iterar en cada uno de los elementos disponibles
+        writeWithFilters()
+        localStorage.removeItem('marca')
     }, 1000); 
 }
 
-
-
+let x=(document.querySelector(".dropbrand").getAttribute('val'))
 //Funcion que se agrega a los circulos para cambiar de color
 const changeColor=(nodo,srcFront,srcBack)=>{
     let containImg=document.getElementById(nodo)
@@ -184,7 +200,7 @@ botonClean.addEventListener('click', limpiarFiltros)
 const filter=(clas,target)=>{
     let selected=[]
     let checks=document.querySelectorAll(clas)
-    console.clear()
+    //console.clear()
     for(let i=0;i<checks.length;i++){
         if(checks[i].checked){
             selected.push(checks[i].value)
@@ -216,6 +232,80 @@ rangeMax.addEventListener("change",filtrar)
 
 //Aqui se agregan funciones a la ventana para que al recargar, se limpien los filtros 
 //y se carguen de nuevo todos los articulos
-window.addEventListener('load',postProducts)
 window.addEventListener('load',cleanFilters)
+window.addEventListener('load',postProducts)
 
+
+let email = document.querySelectorAll(".emaili")
+let pass = document.querySelector("#password")
+let sign = document.querySelector("#singin")
+let mess = document.querySelector("#mess")
+let mess2 = document.querySelector("#mess2")
+let mess3 = document.querySelector("#mess3")
+let subscribir = document.querySelector("#button-addon2")
+
+
+let decimalP =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/
+let decimalE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+function password(){
+    if(pass.value.match(decimalP)){
+        mess.innerHTML = ""
+    }else{
+        mess.innerHTML = "<span style = 'color: red;'>8-15 dígitos, una mayúscula, un número y un caracter especial</span>"
+    }
+   
+}
+
+function ema(){
+    if(email[0].value.match(decimalE)){
+        mess2.innerHTML = ""
+    }else{
+        mess2.innerHTML = "<span style = 'color: red;'>Introduzca un email válido</span>"
+    }
+  
+}
+function ema2(){
+    if(email[1].value.match(decimalE)){
+        mess3.innerHTML = ""
+    }else{
+        mess3.innerHTML = "<span style = 'color: red; font-size: 1rem'>Introduzca un email válido</span>"
+    }
+   
+}
+
+sign.addEventListener("click", ema)
+sign.addEventListener("click", password)
+subscribir.addEventListener("click", ema2)
+
+
+let catCom=document.querySelector('.dropbrand1')
+catCom.addEventListener('click',limpiarFiltros)
+
+
+function getWidth() {
+    return Math.max(
+      document.body.scrollWidth,
+      document.documentElement.scrollWidth,
+      document.body.offsetWidth,
+      document.documentElement.offsetWidth,
+      document.documentElement.clientWidth
+    );
+  }
+
+
+function media(){
+    if(getWidth()<1300){
+        // Cambia tanto como la imagen, como la posición del botón de ver más, como la imagen del modular
+
+        footer.classList.remove("row")
+        footer.classList.add("flex-row")
+    }else{
+        // Regresa todo a como está originalmente
+        footer.classList.remove("flex-row")
+        footer.classList.add("row")
+    }
+}
+setInterval(media,1)
+
+let footer = document.querySelector("#foot")
