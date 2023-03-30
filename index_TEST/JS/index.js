@@ -279,3 +279,10 @@ document.querySelector("#js_A").addEventListener("click", ()=>{agregarFiltro("js
 document.querySelector("#ub_B").addEventListener("click", ()=>{agregarFiltro("urbanot")})
 document.querySelector("#jc_B").addEventListener("click", ()=>{agregarFiltro("javucci")})
 document.querySelector("#js_B").addEventListener("click", ()=>{agregarFiltro("jspenny")})
+
+
+
+
+
+
+
