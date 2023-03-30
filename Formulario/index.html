@@ -35,13 +35,13 @@
           <!-- si es izq se pone ms-auto y si no tiene nada es centro creo -->
 
               <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle navi" 
+                  <a href="../Catalogo/Pages/catalogo.html" class="nav-link dropdown-toggle navi" 
                   id="navbarDropdown" role="button" 
                   data-bs-toggle="dropdown">Catálogo</a>
                   <!-- Esto que le voy a poner abajo es el dropdown -->
                   <ul class="dropdown-menu">
                       <li>
-                          <a href="" class="dropdown-item">Ex1</a>
+                          <a href="" class="dropdown-item">as</a>
                       </li>
                       <li>
                           <a href="" class="dropdown-item">Ex2</a>
@@ -53,10 +53,10 @@
               </li>
 
               <li class="nav-item">
-                  <a href="#" class="nav-link navi">Sobre nosotros</a>
+                  <a href="../Contacto_About-us/aboutUs.html" class="nav-link navi">Sobre nosotros</a>
               </li>
               <li class="nav-item">
-                  <a href="#" class="nav-link navi">Contacto</a>
+                  <a href="../Contacto_About-us/contactUs.html" class="nav-link navi">Contacto</a>
               </li>
           </ul>
 
@@ -102,29 +102,85 @@
       <div class="row">  
         <div class="col-3 order-1 offset-6">
           <label for="FirstName" class="form-label">Nombre(s)</label> 
-          <input type="text" placeholder="Coco" name="nombres" class="form-control" required id="name">
+          <input type="text" placeholder="---" name="nombres" class="form-control" required id="name">
 
           <label for="email" class="form-label">Email</label>
-          <input type="email" placeholder="Email" name="email" id="email" class="form-control" required>
+          <input type="email" placeholder="---" name="email" id="email" class="form-control" required>
         </div> 
-
+ 
         
         <div class="col-3 order-2">
           <label for="LastName" class="form-label">Apellido(s)</label>
-            <input type="text" placeholder="Channel" name="apellidos" id="apellido"  class="form-control" required>
+            <input type="text" placeholder="---" name="apellidos" id="apellido"  class="form-control" required>
 
             <label for="password" class="form-label">Contraseña</label>
-            <input type="password" placeholder="Contraseña" name="contraseña" class="form-control" id="password" required>
+            <input type="password" placeholder="---" name="contraseña" class="form-control" id="password" required>
         </div>
+        <!-- NUEVO --------------------------------------------------------------------------------->
+        <div class="col-3 order-3 offset-6">
+          <label for="FirstName" class="form-label">Calle</label> 
+          <input type="text" placeholder="---" name="calle" class="form-control" required id="calle">
+
+          <label for="colonia" class="form-label">Colonia</label>
+          <input type="email" placeholder="---" name="email" id="colonia" class="form-control" required>
+        </div> 
+        <div class="col-3 order-3">
+          <label for="cp" class="form-label">CP</label> 
+          <input type="text" placeholder="---" name="cp" class="form-control" required id="cp">
+
+          <label for="FirstName" class="form-label">Estado</label> 
+          <select class = 'form-select'name="estado" id = "sele">
+            <option value="no" style="font-family: Raleway;">Seleccione uno...</option>
+            <option value="Aguascalientes" style="font-family: Raleway;">Aguascalientes</option>
+            <option value="Baja California">Baja California</option>
+            <option value="Baja California Sur">Baja California Sur</option>
+            <option value="Campeche">Campeche</option>
+            <option value="Chiapas">Chiapas</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="CDMX">Ciudad de México</option>
+            <option value="Coahuila">Coahuila</option>
+            <option value="Colima">Colima</option>
+            <option value="Durango">Durango</option>
+            <option value="Estado de México">Estado de México</option>
+            <option value="Guanajuato">Guanajuato</option>
+            <option value="Guerrero">Guerrero</option>
+            <option value="Hidalgo">Hidalgo</option>
+            <option value="Jalisco">Jalisco</option>
+            <option value="Michoacán">Michoacán</option>
+            <option value="Morelos">Morelos</option>
+            <option value="Nayarit">Nayarit</option>
+            <option value="Nuevo León">Nuevo León</option>
+            <option value="Oaxaca">Oaxaca</option>
+            <option value="Puebla">Puebla</option>
+            <option value="Querétaro">Querétaro</option>
+            <option value="Quintana Roo">Quintana Roo</option>
+            <option value="San Luis Potosí">San Luis Potosí</option>
+            <option value="Sinaloa">Sinaloa</option>
+            <option value="Sonora">Sonora</option>
+            <option value="Tabasco">Tabasco</option>
+            <option value="Tamaulipas">Tamaulipas</option>
+            <option value="Tlaxcala">Tlaxcala</option>
+            <option value="Veracruz">Veracruz</option>
+            <option value="Yucatán">Yucatán</option>
+            <option value="Zacatecas">Zacatecas</option>
+          </select>
+        </div> 
+        <div class="col-6 order-3 offset-6">
+          <label for="FirstName" class="form-label">Municipio</label> 
+          <input type="text" placeholder="---" name="municipio" class="form-control" required id="municipio">
+
+          
+        </div>
+        <!-- NUEVO------------------------------------------------------------------------------ -->
       </div> <!-- CLOSE -->
       
       <div class="keys">
         <div class="row py-4 offset-6">
           <div class="col-12">
-            <div class="mb-04 form-check" >
+            <!-- <div class="mb-04 form-check" >
               <input type="checkbox" name="connected" class="form-check-input">
               <label for="connected" class="form-check-label">Cuando te registras, aceptas nuestros <a href="#">Condiciones del Servicio</a> y <a href="#">Política de Privacidad</a></label>
-            </div>
+            </div> -->
       
             <div class="row">
               <div class="col text-center">
