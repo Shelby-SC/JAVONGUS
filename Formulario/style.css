@@ -72,6 +72,8 @@ img{
 button.btn {
   background-color: #7286D3;
   color: white;
+  border-style: solid;
+  border-color: #393E46;
 }
 
 button.btn:hover {
@@ -93,7 +95,7 @@ a.btn:hover {
 /*body {
   background-image: url("imags/ht&ml-fondo.png");
   /* background-repeat: no-repeat; */
-  width: 50%; 
+  /* width: 50%; 
 
 .bg {
   width: 95%;
@@ -102,7 +104,7 @@ a.btn:hover {
 
 html, body {
   height: 100%;
-}
+} */
 
 .form {
   min-height: 90vh;
@@ -116,3 +118,6 @@ html, body {
   width: 1.5rem;
 }
 
+.sele{
+  font-family: Raleway;
+}
