@@ -40,14 +40,32 @@ public class ProductoController {
 	public List<Producto> getProducto() {
 		return productoSer.leerProductos();
 	}
-	@GetMapping(path = "{prodId}") 
-	public Producto getProducto(Long prodId) {
+	
+	@GetMapping(path = "/sorted/{order}")
+	public List<Producto> getProductoO(@PathVariable("order") Integer order) {
+		return productoSer.leerProductosO(order);
+	}
+	
+	@GetMapping(path = "/{prodId}") 
+	public Producto getProducto(@PathVariable("prodId") Long prodId) {
 		return productoSer.leerProducto(prodId);
 	}
 	
-	@GetMapping(path = "http://localhost:8080/html/producto/{start}/{end}")
-	public List<Producto> getProducto(Double start,Double end){
+	@GetMapping(path = "/filter")
+	public List<Producto> getProducto(@RequestParam("start") Double start,@RequestParam("end") Double end){
 		return productoSer.precioProducto(start, end);
+	}
+	@GetMapping(path = "/marca/{marca_id}") 
+	public List<Producto> getProductoM(@PathVariable("marca_id") Long marca_id) {
+		return productoSer.leerProductosM(marca_id);
+	}
+	@GetMapping(path = "/tipo/{tipo}") 
+	public List<Producto> getProductoT(@PathVariable("tipo") String tipo) {
+		return productoSer.leerProductosT(tipo);
+	}
+	@GetMapping(path = "/target/{target}") 
+	public List<Producto> getProductoTa(@PathVariable("target") Integer target) {
+		return productoSer.leerProductosTa(target);
 	}
 	
 //	HTTP POST

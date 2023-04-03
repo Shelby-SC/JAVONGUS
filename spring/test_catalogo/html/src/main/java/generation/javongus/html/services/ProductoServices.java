@@ -43,6 +43,33 @@ public class ProductoServices {
 	public List<Producto> precioProducto(Double start, Double end){
 		return productoRe.findByPrecioBetween(start, end);
 	}
+	//	Order
+	public List<Producto> leerProductosO(Integer order) {
+		if (order == 1) {
+	        return productoRe.findAllOrderedA();
+	    }else {
+	    	if(order == 2) {
+	    		return productoRe.findAllOrderedD();
+	    	}
+	    	
+	    }
+		return null;
+	    
+	}
+	//	Marca
+	public List<Producto> leerProductosM(Long marca_id) {
+		return productoRe.findByMarca(marca_id);
+	}
+	//	Tipo
+	public List<Producto> leerProductosT(String tipo) {
+		return productoRe.findByTipo(tipo);
+	}
+	//	Target
+	public List<Producto> leerProductosTa(Integer target) {
+		return productoRe.findByTarget(target);
+	}
+
+	
 	
 //	UPDATE
 	public void actualizarProducto(Long prodId,String nombre, String descripcion, Integer cantidad, Double precio,
